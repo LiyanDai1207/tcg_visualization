@@ -14,12 +14,17 @@
 <body>
   
 <div id="choropleth_map"></div>
+<div id="symbol_map"></div>
 
 <script type="text/javascript">
 
   var spec2 = "js/map8_choropleth.vg.json";
   vegaEmbed('#choropleth_map', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec3 = "js/map9_symbol.vg.json";
+  vegaEmbed('#symbol_map', spec3).then(function(result) {
   }).catch(console.error);
 </script>
 
