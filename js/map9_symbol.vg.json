@@ -56,7 +56,7 @@
           "legend": {"values": [1, 4, 8]}
         },
         "color": {"value": "#e6550d"},
-        "tooltrip": [
+        "tooltip": [
           {"field": "city", "title": "City"},
           {"field": "country", "title": "Country"},
           {"field": "times_hosted", "title": "Times hosted"},
