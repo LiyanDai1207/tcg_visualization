@@ -69,7 +69,7 @@
             ]
           },
           "legend": {
-            "orient": "bottom-right",
+            "orient": "top-right",
             "symbolType": "square"
           }
         }
@@ -388,8 +388,8 @@
       "data": {
         "values": [
           {
-            "lon": 52,
-            "lat": -22
+            "lon": 25,
+            "lat": -44
           }
         ]
       },
