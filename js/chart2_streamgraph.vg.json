@@ -51,7 +51,8 @@
           "axis": {
             "format": "d",
             "tickCount": 7,
-            "grid": false
+            "grid": false,
+            "labelFlush": true
           },
           "scale": {
             "domain": [
