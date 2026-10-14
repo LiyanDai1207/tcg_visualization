@@ -1,0 +1,309 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Flow map of great-circle routes between consecutive Magic World Championship venues, 1994-2025, coloured by era.",
+  "width": "container",
+  "height": 230,
+  "projection": {
+    "type": "equalEarth",
+    "fit": {
+      "type": "Sphere"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "sphere": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e7eff5",
+        "stroke": null
+      }
+    },
+    {
+      "data": {
+        "graticule": {
+          "step": [
+            30,
+            30
+          ]
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#cddae6",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/js/ne_110m_admin_0_countries.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.NAME != 'Antarctica'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#dcdbd5",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                0,
+                -85
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                85
+              ]
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#8fa5b8",
+        "strokeWidth": 0.8,
+        "strokeDash": [
+          4,
+          3
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/worlds_venues.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lat": "number",
+            "lon": "number",
+            "year": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "lead",
+              "field": "lon",
+              "as": "next_lon"
+            },
+            {
+              "op": "lead",
+              "field": "lat",
+              "as": "next_lat"
+            },
+            {
+              "op": "lead",
+              "field": "city",
+              "as": "next_city"
+            },
+            {
+              "op": "lead",
+              "field": "year",
+              "as": "next_year"
+            }
+          ],
+          "sort": [
+            {
+              "field": "year",
+              "order": "ascending"
+            }
+          ]
+        },
+        {
+          "filter": "isValid(datum.next_lon) && datum.city != datum.next_city"
+        },
+        {
+          "calculate": "datum.next_year <= 1998 ? '1994-1998: United States only' : datum.next_year <= 2014 ? '1999-2014: Going global' : '2015-2025: Back to the US'",
+          "as": "era"
+        },
+        {
+          "calculate": "{type: 'LineString', coordinates: [[datum.lon, datum.lat], [datum.next_lon, datum.next_lat]]}",
+          "as": "route"
+        },
+        {
+          "filter": "datum.next_year <= upTo"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "opacity": 0.9,
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "shape": {
+          "field": "route",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "era",
+          "type": "ordinal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "1994-1998: United States only",
+              "1999-2014: Going global",
+              "2015-2025: Back to the US"
+            ],
+            "range": [
+              "#e6c0a4",
+              "#c47b4f",
+              "#7f3414"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "symbolType": "stroke",
+            "columns": 1,
+            "labelLimit": 0
+          }
+        },
+        "strokeWidth": {
+          "field": "era",
+          "type": "ordinal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1994-1998: United States only",
+              "1999-2014: Going global",
+              "2015-2025: Back to the US"
+            ],
+            "range": [
+              1.3,
+              1.3,
+              2.4
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "From year"
+          },
+          {
+            "field": "city",
+            "title": "From"
+          },
+          {
+            "field": "next_city",
+            "title": "To"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/worlds_venues.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lat": "number",
+            "lon": "number",
+            "year": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "size": 22,
+        "color": "#4a4a4a",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "City"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.year <= upTo"
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": -178,
+            "lat": -12
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 9.5,
+        "lineHeight": 12,
+        "color": "#3d4a57",
+        "text": [
+          "Worlds 2021 was held online",
+          "during COVID-19, so the route",
+          "jumps from 2019 to 2022."
+        ]
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "upTo",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 1995,
+        "max": 2025,
+        "step": 1,
+        "name": "Show moves up to: "
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  }
+}

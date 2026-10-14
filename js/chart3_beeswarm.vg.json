@@ -1,0 +1,376 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Beeswarm of full-size card sets (60+ cards) by number of cards, one lane per game, coloured by era.",
+  "width": 420,
+  "height": 300,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/sets_beeswarm.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "x": "number",
+            "y": "number",
+            "cards": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "size": 13,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              420
+            ],
+            "range": [
+              0,
+              420
+            ]
+          }
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              300
+            ],
+            "range": [
+              0,
+              300
+            ]
+          }
+        },
+        "color": {
+          "field": "game",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Magic: The Gathering",
+              "Pokémon",
+              "Yu-Gi-Oh!"
+            ],
+            "range": [
+              "#b5562c",
+              "#c99a1e",
+              "#4b3f8f"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "game",
+            "title": "Game"
+          },
+          {
+            "field": "set_name",
+            "title": "Set"
+          },
+          {
+            "field": "date",
+            "title": "Released"
+          },
+          {
+            "field": "era",
+            "title": "Era"
+          },
+          {
+            "field": "cards",
+            "type": "quantitative",
+            "title": "Cards in set"
+          }
+        ],
+        "opacity": {
+          "condition": {
+            "test": "era == 'All' || datum.era == era",
+            "value": 0.9
+          },
+          "value": 0.08
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Magic",
+            "x": 0,
+            "y": 2
+          },
+          {
+            "t": "Pokémon",
+            "x": 0,
+            "y": 72
+          },
+          {
+            "t": "Yu-Gi-Oh!",
+            "x": 0,
+            "y": 126
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontWeight": "bold",
+        "fontSize": 11,
+        "color": "#333"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              420
+            ],
+            "range": [
+              0,
+              420
+            ]
+          }
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              300
+            ],
+            "range": [
+              0,
+              300
+            ]
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "v": 50,
+            "x": 0.0,
+            "label": "50"
+          },
+          {
+            "v": 100,
+            "x": 85.6,
+            "label": "100"
+          },
+          {
+            "v": 200,
+            "x": 171.2,
+            "label": "200"
+          },
+          {
+            "v": 500,
+            "x": 284.3,
+            "label": "500"
+          },
+          {
+            "v": 1000,
+            "x": 369.9,
+            "label": "1,000"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#bbb"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              420
+            ],
+            "range": [
+              0,
+              420
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "datum": 262,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              300
+            ],
+            "range": [
+              0,
+              300
+            ]
+          }
+        },
+        "y2": {
+          "datum": 267
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "v": 50,
+            "x": 0.0,
+            "label": "50"
+          },
+          {
+            "v": 100,
+            "x": 85.6,
+            "label": "100"
+          },
+          {
+            "v": 200,
+            "x": 171.2,
+            "label": "200"
+          },
+          {
+            "v": 500,
+            "x": 284.3,
+            "label": "500"
+          },
+          {
+            "v": 1000,
+            "x": 369.9,
+            "label": "1,000"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "baseline": "top",
+        "fontSize": 10,
+        "color": "#555"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              420
+            ],
+            "range": [
+              0,
+              420
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "datum": 270,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              300
+            ],
+            "range": [
+              0,
+              300
+            ]
+          }
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "baseline": "top",
+        "fontSize": 10,
+        "color": "#555",
+        "text": "Cards in set (log scale)"
+      },
+      "encoding": {
+        "x": {
+          "value": 210.0
+        },
+        "y": {
+          "value": 286
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 10.5,
+        "lineHeight": 14,
+        "color": "#444",
+        "text": [
+          "Since 2015 the median Magic set has",
+          "nearly doubled (165 to 319 cards) as",
+          "showcase and borderless versions",
+          "were added from 2019."
+        ]
+      },
+      "encoding": {
+        "x": {
+          "value": 225
+        },
+        "y": {
+          "value": 72
+        }
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "era",
+      "value": "All",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "All",
+          "1993-2004",
+          "2005-2014",
+          "2015-2025"
+        ],
+        "name": "Highlight sets released in: "
+      }
+    }
+  ]
+}

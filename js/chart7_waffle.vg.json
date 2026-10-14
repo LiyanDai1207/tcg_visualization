@@ -1,0 +1,120 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Two waffle charts: share of Yu-Gi-Oh! printings by rarity tier in 2002-2006 and 2021-2025.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/ygo_rarity_waffle.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "col": "number",
+        "row": "number",
+        "share": "number"
+      }
+    }
+  },
+  "facet": {
+    "column": {
+      "field": "period",
+      "type": "ordinal",
+      "title": null,
+      "header": {
+        "labelFontSize": 12,
+        "labelFontWeight": "bold",
+        "labelAnchor": "start",
+        "labelColor": "#333"
+      }
+    }
+  },
+  "spacing": 20,
+  "spec": {
+    "width": 150,
+    "height": 150,
+    "mark": {
+      "type": "rect",
+      "cornerRadius": 2
+    },
+    "encoding": {
+      "x": {
+        "field": "col",
+        "type": "ordinal",
+        "axis": null,
+        "scale": {
+          "paddingInner": 0.15
+        }
+      },
+      "y": {
+        "field": "row",
+        "type": "ordinal",
+        "axis": null,
+        "scale": {
+          "paddingInner": 0.15
+        }
+      },
+      "color": {
+        "field": "tier",
+        "type": "ordinal",
+        "title": null,
+        "scale": {
+          "domain": [
+            "Common",
+            "Rare",
+            "Super Rare",
+            "Ultra Rare",
+            "Secret Rare",
+            "Special finishes"
+          ],
+          "range": [
+            "#e9e7f1",
+            "#cbc6e0",
+            "#a59dc9",
+            "#7b71ae",
+            "#4b3f8f",
+            "#2a2257"
+          ]
+        },
+        "legend": {
+          "orient": "bottom",
+          "columns": 3,
+          "labelLimit": 0
+        }
+      },
+      "tooltip": [
+        {
+          "field": "period",
+          "title": "Period"
+        },
+        {
+          "field": "tier",
+          "title": "Rarity tier"
+        },
+        {
+          "field": "share",
+          "type": "quantitative",
+          "title": "Share of printings (%)"
+        }
+      ],
+      "opacity": {
+        "condition": {
+          "param": "tier",
+          "empty": true,
+          "value": 1
+        },
+        "value": 0.2
+      }
+    },
+    "params": [
+      {
+        "name": "tier",
+        "select": {
+          "type": "point",
+          "fields": [
+            "tier"
+          ],
+          "on": "pointerover",
+          "clear": "pointerout"
+        },
+        "bind": "legend"
+      }
+    ]
+  }
+}

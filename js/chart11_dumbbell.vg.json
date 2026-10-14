@@ -1,0 +1,164 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dumbbell chart of median listed price of Yu-Gi-Oh! printings by rarity tier: cards printed 2002-2006 versus 2021-2025.",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/ygo_price_then_now.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "median_price": "number",
+        "printings": "number"
+      }
+    }
+  },
+  "encoding": {
+    "y": {
+      "field": "tier",
+      "type": "ordinal",
+      "title": null,
+      "sort": [
+        "Common",
+        "Rare",
+        "Super Rare",
+        "Ultra Rare",
+        "Secret Rare",
+        "Special finishes"
+      ],
+      "axis": {
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 11
+      }
+    },
+    "x": {
+      "field": "median_price",
+      "type": "quantitative",
+      "title": "Median listed price (US$)",
+      "axis": {
+        "format": "$,.0f",
+        "grid": true,
+        "gridColor": "#e6e6e6",
+        "tickCount": 5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#cfcfd4",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "detail": {
+          "field": "tier"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 110,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "period",
+          "type": "ordinal",
+          "title": "Printed",
+          "scale": {
+            "domain": [
+              "2002-2006",
+              "2021-2025"
+            ],
+            "range": [
+              "#2a2257",
+              "#b5afd6"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "tier",
+            "title": "Rarity tier"
+          },
+          {
+            "field": "period",
+            "title": "Printed"
+          },
+          {
+            "field": "median_price",
+            "type": "quantitative",
+            "title": "Median price (US$)",
+            "format": "$.2f"
+          },
+          {
+            "field": "printings",
+            "type": "quantitative",
+            "title": "Printings with a price"
+          }
+        ],
+        "size": {
+          "condition": {
+            "param": "tierHover",
+            "empty": false,
+            "value": 220
+          },
+          "value": 110
+        }
+      },
+      "params": [
+        {
+          "name": "tierHover",
+          "select": {
+            "type": "point",
+            "fields": [
+              "tier"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 10.5,
+        "lineHeight": 14,
+        "color": "#444",
+        "text": [
+          "Rarity is not always value:",
+          "a 20-year-old Common (US$1.89)",
+          "now costs more than a new",
+          "Ultra Rare (US$1.37)."
+        ]
+      },
+      "encoding": {
+        "x": {
+          "value": 140
+        },
+        "y": {
+          "value": 4
+        }
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  }
+}

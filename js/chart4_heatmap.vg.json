@@ -1,0 +1,241 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Heatmap of the share of new Yu-Gi-Oh! cards by card type and year of first printing, 2002-2025.",
+  "width": "container",
+  "height": 300,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/ygo_types_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "new_cards": "number",
+            "share": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "values": [
+              2002,
+              2006,
+              2010,
+              2014,
+              2018,
+              2022
+            ],
+            "ticks": false,
+            "domain": false
+          },
+          "scale": {
+            "paddingInner": 0.08
+          }
+        },
+        "y": {
+          "field": "card_type",
+          "type": "ordinal",
+          "title": null,
+          "sort": [
+            "Normal Monster",
+            "Effect Monster",
+            "Ritual",
+            "Fusion",
+            "Synchro",
+            "Xyz",
+            "Pendulum",
+            "Link",
+            "Spell",
+            "Trap"
+          ],
+          "axis": {
+            "ticks": false,
+            "domain": false
+          },
+          "scale": {
+            "paddingInner": 0.08
+          }
+        },
+        "color": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "type": "sqrt",
+            "range": [
+              "#ebe9f3",
+              "#2a2257"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "gradientLength": 180,
+            "titleLimit": 0
+          }
+        },
+        "tooltip": [
+          {
+            "field": "card_type",
+            "title": "Card type"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "new_cards",
+            "type": "quantitative",
+            "title": "New cards"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Share of the year (%)"
+          }
+        ],
+        "opacity": {
+          "condition": {
+            "param": "row",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.35
+        }
+      },
+      "transform": [
+        {
+          "calculate": "metric == 'share' ? datum.share : datum.new_cards",
+          "as": "value"
+        }
+      ],
+      "params": [
+        {
+          "name": "row",
+          "select": {
+            "type": "point",
+            "fields": [
+              "card_type"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "card_type": "Synchro",
+            "year": 2007,
+            "t": "New in 2008 (5D's anime)"
+          },
+          {
+            "card_type": "Xyz",
+            "year": 2010,
+            "t": "New in 2011 (ZEXAL)"
+          },
+          {
+            "card_type": "Pendulum",
+            "year": 2013,
+            "t": "New in 2014 (ARC-V)"
+          },
+          {
+            "card_type": "Link",
+            "year": 2016,
+            "t": "New in 2017 (VRAINS)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": 8,
+        "fontSize": 9.5,
+        "color": "#555"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "values": [
+              2002,
+              2006,
+              2010,
+              2014,
+              2018,
+              2022
+            ],
+            "ticks": false,
+            "domain": false
+          },
+          "scale": {
+            "paddingInner": 0.08
+          }
+        },
+        "y": {
+          "field": "card_type",
+          "type": "ordinal",
+          "title": null,
+          "sort": [
+            "Normal Monster",
+            "Effect Monster",
+            "Ritual",
+            "Fusion",
+            "Synchro",
+            "Xyz",
+            "Pendulum",
+            "Link",
+            "Spell",
+            "Trap"
+          ],
+          "axis": {
+            "ticks": false,
+            "domain": false
+          },
+          "scale": {
+            "paddingInner": 0.08
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "metric",
+      "value": "share",
+      "bind": {
+        "input": "select",
+        "options": [
+          "share",
+          "new_cards"
+        ],
+        "labels": [
+          "Share of the year's new cards (%)",
+          "Number of new cards"
+        ],
+        "name": "Colour by: "
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  }
+}

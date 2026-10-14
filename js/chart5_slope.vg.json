@@ -1,0 +1,232 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Slope graph of Yu-Gi-Oh! card-type shares, 2002-2006 versus 2021-2025.",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/ygo_types_then_now.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "share": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "impute": "share",
+      "key": "period",
+      "groupby": [
+        "card_type"
+      ],
+      "value": 0
+    },
+    {
+      "calculate": "datum.card_type == 'Normal Monster' ? 'Normal Monster' : indexof(['Synchro','Xyz','Pendulum','Link'], datum.card_type) >= 0 ? 'New summon types' : 'Other types'",
+      "as": "group"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "period",
+      "type": "ordinal",
+      "title": null,
+      "sort": [
+        "2002-2006",
+        "2021-2025"
+      ],
+      "axis": {
+        "labelAngle": 0,
+        "ticks": false,
+        "domain": false,
+        "labelFontWeight": "bold",
+        "labelColor": "#333"
+      },
+      "scale": {
+        "padding": 0.15
+      }
+    },
+    "y": {
+      "field": "share",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [
+          0,
+          40
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "detail": {
+          "field": "card_type"
+        },
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Normal Monster",
+              "New summon types",
+              "Other types"
+            ],
+            "range": [
+              "#2a2257",
+              "#8f86c4",
+              "#cfcfd4"
+            ]
+          }
+        },
+        "strokeWidth": {
+          "condition": {
+            "param": "line",
+            "empty": false,
+            "value": 4
+          },
+          "value": 2
+        }
+      },
+      "params": [
+        {
+          "name": "line",
+          "select": {
+            "type": "point",
+            "fields": [
+              "card_type"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 40,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "card_type",
+            "title": "Card type"
+          },
+          {
+            "field": "period",
+            "title": "Period"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Share (%)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.period == '2021-2025' && indexof(['Effect Monster','Spell','Trap'], datum.card_type) >= 0"
+        },
+        {
+          "calculate": "datum.card_type + ' ' + format(datum.share, '.0f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 10.5,
+        "color": "#555"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.period == '2002-2006' && indexof(['Effect Monster','Spell','Normal Monster'], datum.card_type) >= 0"
+        },
+        {
+          "calculate": "format(datum.share, '.0f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "fontSize": 10.5,
+        "color": "#555"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.period == '2021-2025' && datum.card_type == 'Normal Monster'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": 4,
+        "fontSize": 10.5,
+        "fontWeight": "bold",
+        "color": "#2a2257"
+      },
+      "encoding": {
+        "text": {
+          "value": "Normal Monster 0.5%"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.period == '2021-2025' && datum.card_type == 'Xyz'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": -6,
+        "fontSize": 10.5,
+        "color": "#5d53a0"
+      },
+      "encoding": {
+        "text": {
+          "value": "Synchro, Xyz, Pendulum, Link"
+        }
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  }
+}
