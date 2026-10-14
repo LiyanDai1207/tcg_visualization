@@ -1,0 +1,409 @@
+rarity,row,year,printings,first_year,norm
+Common,0,2002,1072,2002,0.916
+Common,0,2003,654,2002,0.559
+Common,0,2004,559,2002,0.478
+Common,0,2005,877,2002,0.75
+Common,0,2006,509,2002,0.435
+Common,0,2007,535,2002,0.457
+Common,0,2008,484,2002,0.414
+Common,0,2009,426,2002,0.364
+Common,0,2010,378,2002,0.323
+Common,0,2011,557,2002,0.476
+Common,0,2012,730,2002,0.624
+Common,0,2013,844,2002,0.721
+Common,0,2014,902,2002,0.771
+Common,0,2015,738,2002,0.631
+Common,0,2016,771,2002,0.659
+Common,0,2017,753,2002,0.644
+Common,0,2018,825,2002,0.705
+Common,0,2019,991,2002,0.847
+Common,0,2020,1170,2002,1.0
+Common,0,2021,685,2002,0.585
+Common,0,2022,1164,2002,0.995
+Common,0,2023,998,2002,0.853
+Common,0,2024,542,2002,0.463
+Common,0,2025,458,2002,0.391
+Super Rare,1,2002,149,2002,0.404
+Super Rare,1,2003,106,2002,0.287
+Super Rare,1,2004,77,2002,0.209
+Super Rare,1,2005,99,2002,0.268
+Super Rare,1,2006,80,2002,0.217
+Super Rare,1,2007,105,2002,0.285
+Super Rare,1,2008,122,2002,0.331
+Super Rare,1,2009,114,2002,0.309
+Super Rare,1,2010,196,2002,0.531
+Super Rare,1,2011,230,2002,0.623
+Super Rare,1,2012,219,2002,0.593
+Super Rare,1,2013,225,2002,0.61
+Super Rare,1,2014,310,2002,0.84
+Super Rare,1,2015,270,2002,0.732
+Super Rare,1,2016,201,2002,0.545
+Super Rare,1,2017,280,2002,0.759
+Super Rare,1,2018,321,2002,0.87
+Super Rare,1,2019,369,2002,1.0
+Super Rare,1,2020,270,2002,0.732
+Super Rare,1,2021,251,2002,0.68
+Super Rare,1,2022,245,2002,0.664
+Super Rare,1,2023,337,2002,0.913
+Super Rare,1,2024,336,2002,0.911
+Super Rare,1,2025,285,2002,0.772
+Ultra Rare,2,2002,137,2002,0.249
+Ultra Rare,2,2003,94,2002,0.171
+Ultra Rare,2,2004,66,2002,0.12
+Ultra Rare,2,2005,83,2002,0.151
+Ultra Rare,2,2006,59,2002,0.107
+Ultra Rare,2,2007,55,2002,0.1
+Ultra Rare,2,2008,84,2002,0.152
+Ultra Rare,2,2009,68,2002,0.123
+Ultra Rare,2,2010,74,2002,0.134
+Ultra Rare,2,2011,113,2002,0.205
+Ultra Rare,2,2012,119,2002,0.216
+Ultra Rare,2,2013,89,2002,0.162
+Ultra Rare,2,2014,154,2002,0.279
+Ultra Rare,2,2015,115,2002,0.209
+Ultra Rare,2,2016,212,2002,0.385
+Ultra Rare,2,2017,271,2002,0.492
+Ultra Rare,2,2018,257,2002,0.466
+Ultra Rare,2,2019,383,2002,0.695
+Ultra Rare,2,2020,377,2002,0.684
+Ultra Rare,2,2021,371,2002,0.673
+Ultra Rare,2,2022,523,2002,0.949
+Ultra Rare,2,2023,321,2002,0.583
+Ultra Rare,2,2024,551,2002,1.0
+Ultra Rare,2,2025,505,2002,0.917
+Rare,3,2002,278,2002,1.0
+Rare,3,2003,161,2002,0.579
+Rare,3,2004,113,2002,0.406
+Rare,3,2005,154,2002,0.554
+Rare,3,2006,137,2002,0.493
+Rare,3,2007,159,2002,0.572
+Rare,3,2008,159,2002,0.572
+Rare,3,2009,150,2002,0.54
+Rare,3,2010,154,2002,0.554
+Rare,3,2011,175,2002,0.629
+Rare,3,2012,235,2002,0.845
+Rare,3,2013,184,2002,0.662
+Rare,3,2014,220,2002,0.791
+Rare,3,2015,138,2002,0.496
+Rare,3,2016,147,2002,0.529
+Rare,3,2017,135,2002,0.486
+Rare,3,2018,135,2002,0.486
+Rare,3,2019,121,2002,0.435
+Rare,3,2020,241,2002,0.867
+Rare,3,2021,201,2002,0.723
+Rare,3,2022,124,2002,0.446
+Rare,3,2023,182,2002,0.655
+Rare,3,2024,97,2002,0.349
+Rare,3,2025,137,2002,0.493
+Secret Rare,4,2002,32,2002,0.127
+Secret Rare,4,2003,24,2002,0.095
+Secret Rare,4,2004,18,2002,0.071
+Secret Rare,4,2005,21,2002,0.083
+Secret Rare,4,2006,18,2002,0.071
+Secret Rare,4,2007,77,2002,0.306
+Secret Rare,4,2008,75,2002,0.298
+Secret Rare,4,2009,67,2002,0.266
+Secret Rare,4,2010,78,2002,0.31
+Secret Rare,4,2011,135,2002,0.536
+Secret Rare,4,2012,143,2002,0.567
+Secret Rare,4,2013,107,2002,0.425
+Secret Rare,4,2014,125,2002,0.496
+Secret Rare,4,2015,107,2002,0.425
+Secret Rare,4,2016,97,2002,0.385
+Secret Rare,4,2017,109,2002,0.433
+Secret Rare,4,2018,208,2002,0.825
+Secret Rare,4,2019,126,2002,0.5
+Secret Rare,4,2020,188,2002,0.746
+Secret Rare,4,2021,86,2002,0.341
+Secret Rare,4,2022,132,2002,0.524
+Secret Rare,4,2023,204,2002,0.81
+Secret Rare,4,2024,252,2002,1.0
+Secret Rare,4,2025,206,2002,0.817
+Short Print,5,2002,156,2002,1.0
+Short Print,5,2003,80,2002,0.513
+Short Print,5,2004,79,2002,0.506
+Short Print,5,2005,4,2002,0.026
+Short Print,5,2006,0,2002,0.0
+Short Print,5,2007,0,2002,0.0
+Short Print,5,2008,8,2002,0.051
+Short Print,5,2009,16,2002,0.103
+Short Print,5,2010,16,2002,0.103
+Short Print,5,2011,16,2002,0.103
+Short Print,5,2012,17,2002,0.109
+Short Print,5,2013,20,2002,0.128
+Short Print,5,2014,24,2002,0.154
+Short Print,5,2015,22,2002,0.141
+Short Print,5,2016,25,2002,0.16
+Short Print,5,2017,22,2002,0.141
+Short Print,5,2018,17,2002,0.109
+Short Print,5,2019,0,2002,0.0
+Short Print,5,2020,0,2002,0.0
+Short Print,5,2021,0,2002,0.0
+Short Print,5,2022,0,2002,0.0
+Short Print,5,2023,0,2002,0.0
+Short Print,5,2024,0,2002,0.0
+Short Print,5,2025,0,2002,0.0
+Ultimate Rare,6,2002,0,2004,0.0
+Ultimate Rare,6,2003,0,2004,0.0
+Ultimate Rare,6,2004,50,2004,0.301
+Ultimate Rare,6,2005,100,2004,0.602
+Ultimate Rare,6,2006,100,2004,0.602
+Ultimate Rare,6,2007,78,2004,0.47
+Ultimate Rare,6,2008,40,2004,0.241
+Ultimate Rare,6,2009,41,2004,0.247
+Ultimate Rare,6,2010,48,2004,0.289
+Ultimate Rare,6,2011,42,2004,0.253
+Ultimate Rare,6,2012,45,2004,0.271
+Ultimate Rare,6,2013,41,2004,0.247
+Ultimate Rare,6,2014,29,2004,0.175
+Ultimate Rare,6,2015,26,2004,0.157
+Ultimate Rare,6,2016,9,2004,0.054
+Ultimate Rare,6,2017,9,2004,0.054
+Ultimate Rare,6,2018,18,2004,0.108
+Ultimate Rare,6,2019,18,2004,0.108
+Ultimate Rare,6,2020,12,2004,0.072
+Ultimate Rare,6,2021,18,2004,0.108
+Ultimate Rare,6,2022,15,2004,0.09
+Ultimate Rare,6,2023,88,2004,0.53
+Ultimate Rare,6,2024,166,2004,1.0
+Ultimate Rare,6,2025,90,2004,0.542
+Duel Terminal Normal Parallel Rare,7,2002,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2003,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2004,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2005,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2006,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2007,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2008,20,2008,0.109
+Duel Terminal Normal Parallel Rare,7,2009,6,2008,0.033
+Duel Terminal Normal Parallel Rare,7,2010,183,2008,1.0
+Duel Terminal Normal Parallel Rare,7,2011,125,2008,0.683
+Duel Terminal Normal Parallel Rare,7,2012,93,2008,0.508
+Duel Terminal Normal Parallel Rare,7,2013,30,2008,0.164
+Duel Terminal Normal Parallel Rare,7,2014,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2015,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2016,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2017,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2018,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2019,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2020,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2021,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2022,137,2008,0.749
+Duel Terminal Normal Parallel Rare,7,2023,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2024,0,2008,0.0
+Duel Terminal Normal Parallel Rare,7,2025,0,2008,0.0
+Gold Rare,8,2002,0,2008,0.0
+Gold Rare,8,2003,0,2008,0.0
+Gold Rare,8,2004,0,2008,0.0
+Gold Rare,8,2005,0,2008,0.0
+Gold Rare,8,2006,0,2008,0.0
+Gold Rare,8,2007,0,2008,0.0
+Gold Rare,8,2008,18,2008,0.257
+Gold Rare,8,2009,18,2008,0.257
+Gold Rare,8,2010,18,2008,0.257
+Gold Rare,8,2011,18,2008,0.257
+Gold Rare,8,2012,12,2008,0.171
+Gold Rare,8,2013,0,2008,0.0
+Gold Rare,8,2014,58,2008,0.829
+Gold Rare,8,2015,70,2008,1.0
+Gold Rare,8,2016,60,2008,0.857
+Gold Rare,8,2017,57,2008,0.814
+Gold Rare,8,2018,0,2008,0.0
+Gold Rare,8,2019,0,2008,0.0
+Gold Rare,8,2020,0,2008,0.0
+Gold Rare,8,2021,0,2008,0.0
+Gold Rare,8,2022,0,2008,0.0
+Gold Rare,8,2023,0,2008,0.0
+Gold Rare,8,2024,0,2008,0.0
+Gold Rare,8,2025,0,2008,0.0
+Starfoil Rare,9,2002,0,2012,0.0
+Starfoil Rare,9,2003,0,2012,0.0
+Starfoil Rare,9,2004,0,2012,0.0
+Starfoil Rare,9,2005,0,2012,0.0
+Starfoil Rare,9,2006,0,2012,0.0
+Starfoil Rare,9,2007,0,2012,0.0
+Starfoil Rare,9,2008,0,2012,0.0
+Starfoil Rare,9,2009,0,2012,0.0
+Starfoil Rare,9,2010,0,2012,0.0
+Starfoil Rare,9,2011,0,2012,0.0
+Starfoil Rare,9,2012,240,2012,1.0
+Starfoil Rare,9,2013,50,2012,0.208
+Starfoil Rare,9,2014,51,2012,0.212
+Starfoil Rare,9,2015,0,2012,0.0
+Starfoil Rare,9,2016,0,2012,0.0
+Starfoil Rare,9,2017,50,2012,0.208
+Starfoil Rare,9,2018,50,2012,0.208
+Starfoil Rare,9,2019,0,2012,0.0
+Starfoil Rare,9,2020,0,2012,0.0
+Starfoil Rare,9,2021,0,2012,0.0
+Starfoil Rare,9,2022,0,2012,0.0
+Starfoil Rare,9,2023,0,2012,0.0
+Starfoil Rare,9,2024,0,2012,0.0
+Starfoil Rare,9,2025,0,2012,0.0
+Mosaic Rare,10,2002,0,2013,0.0
+Mosaic Rare,10,2003,0,2013,0.0
+Mosaic Rare,10,2004,0,2013,0.0
+Mosaic Rare,10,2005,0,2013,0.0
+Mosaic Rare,10,2006,0,2013,0.0
+Mosaic Rare,10,2007,0,2013,0.0
+Mosaic Rare,10,2008,0,2013,0.0
+Mosaic Rare,10,2009,0,2013,0.0
+Mosaic Rare,10,2010,0,2013,0.0
+Mosaic Rare,10,2011,0,2013,0.0
+Mosaic Rare,10,2012,0,2013,0.0
+Mosaic Rare,10,2013,215,2013,1.0
+Mosaic Rare,10,2014,0,2013,0.0
+Mosaic Rare,10,2015,0,2013,0.0
+Mosaic Rare,10,2016,0,2013,0.0
+Mosaic Rare,10,2017,0,2013,0.0
+Mosaic Rare,10,2018,0,2013,0.0
+Mosaic Rare,10,2019,0,2013,0.0
+Mosaic Rare,10,2020,0,2013,0.0
+Mosaic Rare,10,2021,0,2013,0.0
+Mosaic Rare,10,2022,0,2013,0.0
+Mosaic Rare,10,2023,0,2013,0.0
+Mosaic Rare,10,2024,0,2013,0.0
+Mosaic Rare,10,2025,0,2013,0.0
+Platinum Secret Rare,11,2002,0,2014,0.0
+Platinum Secret Rare,11,2003,0,2014,0.0
+Platinum Secret Rare,11,2004,0,2014,0.0
+Platinum Secret Rare,11,2005,0,2014,0.0
+Platinum Secret Rare,11,2006,0,2014,0.0
+Platinum Secret Rare,11,2007,0,2014,0.0
+Platinum Secret Rare,11,2008,0,2014,0.0
+Platinum Secret Rare,11,2009,0,2014,0.0
+Platinum Secret Rare,11,2010,0,2014,0.0
+Platinum Secret Rare,11,2011,0,2014,0.0
+Platinum Secret Rare,11,2012,0,2014,0.0
+Platinum Secret Rare,11,2013,0,2014,0.0
+Platinum Secret Rare,11,2014,2,2014,0.006
+Platinum Secret Rare,11,2015,2,2014,0.006
+Platinum Secret Rare,11,2016,0,2014,0.0
+Platinum Secret Rare,11,2017,0,2014,0.0
+Platinum Secret Rare,11,2018,0,2014,0.0
+Platinum Secret Rare,11,2019,0,2014,0.0
+Platinum Secret Rare,11,2020,0,2014,0.0
+Platinum Secret Rare,11,2021,0,2014,0.0
+Platinum Secret Rare,11,2022,0,2014,0.0
+Platinum Secret Rare,11,2023,79,2014,0.223
+Platinum Secret Rare,11,2024,355,2014,1.0
+Platinum Secret Rare,11,2025,272,2014,0.766
+Shatterfoil Rare,12,2002,0,2014,0.0
+Shatterfoil Rare,12,2003,0,2014,0.0
+Shatterfoil Rare,12,2004,0,2014,0.0
+Shatterfoil Rare,12,2005,0,2014,0.0
+Shatterfoil Rare,12,2006,0,2014,0.0
+Shatterfoil Rare,12,2007,0,2014,0.0
+Shatterfoil Rare,12,2008,0,2014,0.0
+Shatterfoil Rare,12,2009,0,2014,0.0
+Shatterfoil Rare,12,2010,0,2014,0.0
+Shatterfoil Rare,12,2011,0,2014,0.0
+Shatterfoil Rare,12,2012,0,2014,0.0
+Shatterfoil Rare,12,2013,0,2014,0.0
+Shatterfoil Rare,12,2014,237,2014,1.0
+Shatterfoil Rare,12,2015,60,2014,0.253
+Shatterfoil Rare,12,2016,0,2014,0.0
+Shatterfoil Rare,12,2017,0,2014,0.0
+Shatterfoil Rare,12,2018,0,2014,0.0
+Shatterfoil Rare,12,2019,0,2014,0.0
+Shatterfoil Rare,12,2020,0,2014,0.0
+Shatterfoil Rare,12,2021,0,2014,0.0
+Shatterfoil Rare,12,2022,0,2014,0.0
+Shatterfoil Rare,12,2023,0,2014,0.0
+Shatterfoil Rare,12,2024,0,2014,0.0
+Shatterfoil Rare,12,2025,0,2014,0.0
+Prismatic Secret Rare,13,2002,0,2015,0.0
+Prismatic Secret Rare,13,2003,0,2015,0.0
+Prismatic Secret Rare,13,2004,0,2015,0.0
+Prismatic Secret Rare,13,2005,0,2015,0.0
+Prismatic Secret Rare,13,2006,0,2015,0.0
+Prismatic Secret Rare,13,2007,0,2015,0.0
+Prismatic Secret Rare,13,2008,0,2015,0.0
+Prismatic Secret Rare,13,2009,0,2015,0.0
+Prismatic Secret Rare,13,2010,0,2015,0.0
+Prismatic Secret Rare,13,2011,0,2015,0.0
+Prismatic Secret Rare,13,2012,0,2015,0.0
+Prismatic Secret Rare,13,2013,0,2015,0.0
+Prismatic Secret Rare,13,2014,0,2015,0.0
+Prismatic Secret Rare,13,2015,16,2015,0.16
+Prismatic Secret Rare,13,2016,0,2015,0.0
+Prismatic Secret Rare,13,2017,0,2015,0.0
+Prismatic Secret Rare,13,2018,0,2015,0.0
+Prismatic Secret Rare,13,2019,43,2015,0.43
+Prismatic Secret Rare,13,2020,27,2015,0.27
+Prismatic Secret Rare,13,2021,30,2015,0.3
+Prismatic Secret Rare,13,2022,34,2015,0.34
+Prismatic Secret Rare,13,2023,70,2015,0.7
+Prismatic Secret Rare,13,2024,98,2015,0.98
+Prismatic Secret Rare,13,2025,100,2015,1.0
+Starlight Rare,14,2002,0,2019,0.0
+Starlight Rare,14,2003,0,2019,0.0
+Starlight Rare,14,2004,0,2019,0.0
+Starlight Rare,14,2005,0,2019,0.0
+Starlight Rare,14,2006,0,2019,0.0
+Starlight Rare,14,2007,0,2019,0.0
+Starlight Rare,14,2008,0,2019,0.0
+Starlight Rare,14,2009,0,2019,0.0
+Starlight Rare,14,2010,0,2019,0.0
+Starlight Rare,14,2011,0,2019,0.0
+Starlight Rare,14,2012,0,2019,0.0
+Starlight Rare,14,2013,0,2019,0.0
+Starlight Rare,14,2014,0,2019,0.0
+Starlight Rare,14,2015,0,2019,0.0
+Starlight Rare,14,2016,0,2019,0.0
+Starlight Rare,14,2017,0,2019,0.0
+Starlight Rare,14,2018,0,2019,0.0
+Starlight Rare,14,2019,8,2019,0.058
+Starlight Rare,14,2020,20,2019,0.144
+Starlight Rare,14,2021,22,2019,0.158
+Starlight Rare,14,2022,30,2019,0.216
+Starlight Rare,14,2023,10,2019,0.072
+Starlight Rare,14,2024,0,2019,0.0
+Starlight Rare,14,2025,139,2019,1.0
+Collector's Rare,15,2002,0,2020,0.0
+Collector's Rare,15,2003,0,2020,0.0
+Collector's Rare,15,2004,0,2020,0.0
+Collector's Rare,15,2005,0,2020,0.0
+Collector's Rare,15,2006,0,2020,0.0
+Collector's Rare,15,2007,0,2020,0.0
+Collector's Rare,15,2008,0,2020,0.0
+Collector's Rare,15,2009,0,2020,0.0
+Collector's Rare,15,2010,0,2020,0.0
+Collector's Rare,15,2011,0,2020,0.0
+Collector's Rare,15,2012,0,2020,0.0
+Collector's Rare,15,2013,0,2020,0.0
+Collector's Rare,15,2014,0,2020,0.0
+Collector's Rare,15,2015,0,2020,0.0
+Collector's Rare,15,2016,0,2020,0.0
+Collector's Rare,15,2017,0,2020,0.0
+Collector's Rare,15,2018,0,2020,0.0
+Collector's Rare,15,2019,0,2020,0.0
+Collector's Rare,15,2020,29,2020,0.164
+Collector's Rare,15,2021,30,2020,0.169
+Collector's Rare,15,2022,29,2020,0.164
+Collector's Rare,15,2023,141,2020,0.797
+Collector's Rare,15,2024,177,2020,1.0
+Collector's Rare,15,2025,126,2020,0.712
+Quarter Century Secret Rare,16,2002,0,2023,0.0
+Quarter Century Secret Rare,16,2003,0,2023,0.0
+Quarter Century Secret Rare,16,2004,0,2023,0.0
+Quarter Century Secret Rare,16,2005,0,2023,0.0
+Quarter Century Secret Rare,16,2006,0,2023,0.0
+Quarter Century Secret Rare,16,2007,0,2023,0.0
+Quarter Century Secret Rare,16,2008,0,2023,0.0
+Quarter Century Secret Rare,16,2009,0,2023,0.0
+Quarter Century Secret Rare,16,2010,0,2023,0.0
+Quarter Century Secret Rare,16,2011,0,2023,0.0
+Quarter Century Secret Rare,16,2012,0,2023,0.0
+Quarter Century Secret Rare,16,2013,0,2023,0.0
+Quarter Century Secret Rare,16,2014,0,2023,0.0
+Quarter Century Secret Rare,16,2015,0,2023,0.0
+Quarter Century Secret Rare,16,2016,0,2023,0.0
+Quarter Century Secret Rare,16,2017,0,2023,0.0
+Quarter Century Secret Rare,16,2018,0,2023,0.0
+Quarter Century Secret Rare,16,2019,0,2023,0.0
+Quarter Century Secret Rare,16,2020,0,2023,0.0
+Quarter Century Secret Rare,16,2021,0,2023,0.0
+Quarter Century Secret Rare,16,2022,0,2023,0.0
+Quarter Century Secret Rare,16,2023,166,2023,0.31
+Quarter Century Secret Rare,16,2024,536,2023,1.0
+Quarter Century Secret Rare,16,2025,343,2023,0.64

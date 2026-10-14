@@ -1,0 +1,616 @@
+game,set_name,date,cards,era,x,y
+Magic: The Gathering,Hachette UK,2006-01-01,60,2005-2014,15.3,35
+Magic: The Gathering,Coldsnap Theme Decks,2006-07-21,62,2005-2014,19.4,35
+Magic: The Gathering,Duel Decks: Elves vs. Goblins,2007-11-16,62,2005-2014,23.0,38.6
+Magic: The Gathering,Duel Decks: Divine vs. Demonic,2009-04-10,62,2005-2014,26.6,35
+Magic: The Gathering,Duel Decks Anthology: Divine vs. Demonic,2014-12-05,62,2005-2014,30.2,35
+Magic: The Gathering,Duel Decks Anthology: Jace vs. Chandra,2014-12-05,62,2005-2014,33.8,38.6
+Magic: The Gathering,Duel Decks Anthology: Elves vs. Goblins,2014-12-05,62,2005-2014,19.4,31.4
+Magic: The Gathering,The List (Unfinity Foil Edition),2022-10-07,62,2015-2025,23.0,42.2
+Magic: The Gathering,Duel Decks: Garruk vs. Liliana,2009-10-30,63,2005-2014,21.3,27.8
+Magic: The Gathering,Duel Decks Anthology: Garruk vs. Liliana,2014-12-05,63,2005-2014,24.9,31.4
+Magic: The Gathering,Duel Decks: Merfolk vs. Goblins,2017-10-24,63,2015-2025,28.5,38.6
+Magic: The Gathering,Duel Decks: Jace vs. Chandra,2008-11-07,64,2005-2014,23.3,45.8
+Magic: The Gathering,Game Night 2019,2019-11-15,64,2015-2025,26.9,42.2
+Magic: The Gathering,Rivals Quick Start Set,1996-07-01,65,1993-2004,25.2,27.8
+Magic: The Gathering,Duel Decks: Mind vs. Might,2017-03-31,65,2015-2025,28.8,31.4
+Magic: The Gathering,Introductory Two-Player Set,1996-12-31,67,1993-2004,28.9,27.8
+Magic: The Gathering,Duel Decks: Elspeth vs. Kiora,2015-02-27,67,2015-2025,32.5,31.4
+Magic: The Gathering,Game Night,2018-11-16,68,2015-2025,30.8,42.2
+Magic: The Gathering,Rinascimento,1995-08-01,69,1993-2004,32.6,27.8
+Magic: The Gathering,Duel Decks: Phyrexia vs. the Coalition,2010-03-19,71,2005-2014,36.1,35
+Magic: The Gathering,Duel Decks: Nissa vs. Ob Nixilis,2016-09-02,76,2015-2025,44.5,35
+Magic: The Gathering,Duel Decks: Elves vs. Inventors,2018-04-06,76,2015-2025,48.1,35
+Magic: The Gathering,Duel Decks: Venser vs. Koth,2012-03-30,77,2005-2014,46.1,38.6
+Magic: The Gathering,Duel Decks: Elspeth vs. Tezzeret,2010-09-03,79,2005-2014,49.3,31.4
+Magic: The Gathering,Duel Decks: Ajani vs. Nicol Bolas,2011-09-02,80,2005-2014,50.8,38.6
+Magic: The Gathering,Duel Decks: Sorin vs. Tibalt,2013-03-15,80,2005-2014,54.4,35
+Magic: The Gathering,Duel Decks: Zendikar vs. Eldrazi,2015-08-28,80,2015-2025,58.0,35
+Magic: The Gathering,Duel Decks: Blessed vs. Cursed,2016-02-26,80,2015-2025,61.6,35
+Magic: The Gathering,Duel Decks: Knights vs. Dragons,2011-04-01,81,2005-2014,52.4,42.2
+Magic: The Gathering,Duel Decks: Heroes vs. Monsters,2013-09-06,81,2005-2014,56.0,38.6
+Magic: The Gathering,Duel Decks: Speed vs. Cunning,2014-09-05,82,2005-2014,53.9,31.4
+Magic: The Gathering,Secret Lair Countdown,2022-11-01,84,2015-2025,56.9,42.2
+Magic: The Gathering,Anthologies,1998-11-01,85,1993-2004,58.3,31.4
+Magic: The Gathering,Planechase Anthology Planes,2016-11-25,86,2015-2025,59.8,38.6
+Magic: The Gathering,Unglued,1998-08-11,88,1993-2004,62.6,31.4
+Magic: The Gathering,Duel Decks: Jace vs. Vraska,2014-03-14,88,2005-2014,66.2,35
+Magic: The Gathering,Beatdown Box Set,2000-10-01,90,1993-2004,65.4,38.6
+Magic: The Gathering,Duel Decks: Izzet vs. Golgari,2012-09-07,90,2005-2014,69.0,38.6
+Magic: The Gathering,Arabian Nights,1993-12-17,92,1993-2004,68.1,31.4
+Magic: The Gathering,The Big Score,2024-04-19,95,2015-2025,72.1,35
+Magic: The Gathering,Unsanctioned,2020-02-29,96,2015-2025,73.4,38.6
+Magic: The Gathering,Antiquities,1994-03-04,102,1993-2004,80.8,35
+Magic: The Gathering,Archenemy: Nicol Bolas,2017-06-16,106,2015-2025,85.6,35
+Magic: The Gathering,Duels of the Planeswalkers,2010-06-04,113,2005-2014,93.5,35
+Magic: The Gathering,Kaldheim Commander,2021-02-05,119,2015-2025,99.9,35
+Magic: The Gathering,Time Spiral Timeshifted,2006-10-06,121,2005-2014,101.9,38.6
+Magic: The Gathering,Mystery Booster Playtest Cards 2019,2019-11-07,121,2015-2025,105.5,35
+Magic: The Gathering,Mystery Booster Playtest Cards 2021,2021-08-20,121,2015-2025,109.1,38.6
+Magic: The Gathering,The Dark,1994-08-01,122,1993-2004,102.9,31.4
+Magic: The Gathering,Renaissance,1995-08-01,122,1993-2004,106.5,31.4
+Magic: The Gathering,Chronicles Foreign Black Border,1995-07-01,125,1993-2004,105.9,42.2
+Magic: The Gathering,Chronicles,1995-07-01,125,1993-2004,109.5,35
+Magic: The Gathering,GRN Guild Kit,2018-11-02,127,2015-2025,107.9,27.8
+Magic: The Gathering,RNA Guild Kit,2019-02-15,133,2015-2025,113.6,35
+Magic: The Gathering,Game Night: Free-for-All,2022-10-14,135,2015-2025,115.5,38.6
+Magic: The Gathering,Battle Royale Box Set,1999-11-12,136,1993-2004,116.4,31.4
+Magic: The Gathering,Homelands,1995-10-01,140,1993-2004,119.9,35
+Magic: The Gathering,Zendikar Rising Commander,2020-09-25,142,2015-2025,121.7,38.6
+Magic: The Gathering,Stronghold,1998-03-02,143,1993-2004,122.6,31.4
+Magic: The Gathering,Exodus,1998-06-15,143,1993-2004,126.2,35
+Magic: The Gathering,Urza's Legacy,1999-02-15,143,1993-2004,129.8,38.6
+Magic: The Gathering,Urza's Destiny,1999-06-07,143,1993-2004,133.4,35
+Magic: The Gathering,Nemesis,2000-02-14,143,1993-2004,137.0,38.6
+Magic: The Gathering,Apocalypse,2001-06-04,143,1993-2004,122.6,42.2
+Magic: The Gathering,Torment,2002-02-04,143,1993-2004,126.2,31.4
+Magic: The Gathering,Judgment,2002-05-27,143,1993-2004,129.8,42.2
+Magic: The Gathering,Scourge,2003-05-26,143,1993-2004,133.4,31.4
+Magic: The Gathering,Prophecy,2000-06-05,144,1993-2004,123.4,27.8
+Magic: The Gathering,Legions,2003-02-03,145,1993-2004,124.3,45.8
+Magic: The Gathering,Conflux,2009-02-06,145,2005-2014,127.9,27.8
+Magic: The Gathering,Alara Reborn,2009-04-30,145,2005-2014,131.5,45.8
+Magic: The Gathering,Worldwake,2010-02-05,145,2005-2014,135.1,42.2
+Magic: The Gathering,Planeshift,2001-02-05,146,1993-2004,125.1,24.2
+Magic: The Gathering,Morningtide,2008-02-01,150,2005-2014,128.5,49.4
+Magic: The Gathering,Archenemy,2010-06-18,150,2005-2014,132.1,27.8
+Magic: The Gathering,Coldsnap,2006-07-21,155,2005-2014,132.5,24.2
+Magic: The Gathering,Mirrodin Besieged,2011-02-04,155,2005-2014,136.1,27.8
+Magic: The Gathering,Planechase 2012,2012-06-01,156,2005-2014,133.3,49.4
+Magic: The Gathering,Dragon's Maze,2013-05-03,156,2005-2014,136.9,45.8
+Magic: The Gathering,Planechase Anthology,2016-11-25,156,2015-2025,140.5,35
+Magic: The Gathering,Dark Ascension,2012-02-03,158,2005-2014,134.9,20.6
+Magic: The Gathering,Portal Second Age,1998-06-24,165,1993-2004,140.2,31.4
+Magic: The Gathering,Darksteel,2004-02-06,165,1993-2004,143.8,38.6
+Magic: The Gathering,Fifth Dawn,2004-06-04,165,1993-2004,147.4,35
+Magic: The Gathering,Betrayers of Kamigawa,2005-02-04,165,2005-2014,151.0,38.6
+Magic: The Gathering,Saviors of Kamigawa,2005-06-03,165,2005-2014,154.6,35
+Magic: The Gathering,Planar Chaos,2007-02-02,165,2005-2014,140.2,42.2
+Magic: The Gathering,Born of the Gods,2014-02-07,165,2005-2014,143.8,27.8
+Magic: The Gathering,Journey into Nyx,2014-05-02,165,2005-2014,147.4,31.4
+Magic: The Gathering,Visions,1997-02-03,167,1993-2004,141.7,45.8
+Magic: The Gathering,Weatherlight,1997-06-09,167,1993-2004,145.3,42.2
+Magic: The Gathering,Guildpact,2006-02-03,167,2005-2014,148.9,27.8
+Magic: The Gathering,Unhinged,2004-11-19,168,1993-2004,142.5,24.2
+Magic: The Gathering,Planechase,2009-09-04,169,2005-2014,143.2,49.4
+Magic: The Gathering,Starter 1999,1999-07-01,173,1993-2004,146.1,45.8
+Magic: The Gathering,Wilds of Eldraine Commander,2023-09-08,173,2015-2025,149.7,42.2
+Magic: The Gathering,Phyrexia: All Will Be One Commander,2023-02-10,174,2015-2025,146.8,24.2
+Magic: The Gathering,New Phyrexia,2011-05-13,175,2005-2014,147.5,49.4
+Magic: The Gathering,Neon Dynasty Commander,2022-02-18,179,2015-2025,150.3,45.8
+Magic: The Gathering,Portal Three Kingdoms,1999-05-01,180,1993-2004,151.0,24.2
+Magic: The Gathering,Dissension,2006-05-05,180,2005-2014,154.6,31.4
+Magic: The Gathering,Future Sight,2007-05-04,180,2005-2014,158.2,38.6
+Magic: The Gathering,Eventide,2008-07-25,180,2005-2014,161.8,35
+Magic: The Gathering,Aetherdrift Commander,2025-02-14,184,2015-2025,153.7,42.2
+Magic: The Gathering,Fallen Empires,1994-11-01,187,1993-2004,155.7,27.8
+Magic: The Gathering,Oath of the Gatewatch,2016-01-22,187,2015-2025,159.3,31.4
+Magic: The Gathering,Midnight Hunt Commander,2021-09-24,187,2015-2025,162.9,38.6
+Magic: The Gathering,Crimson Vow Commander,2021-11-19,188,2015-2025,156.3,45.8
+Magic: The Gathering,Fate Reforged,2015-01-23,191,2015-2025,158.3,42.2
+Magic: The Gathering,Edge of Eternities Commander,2025-08-01,191,2015-2025,161.9,27.8
+Magic: The Gathering,Aether Revolt,2017-01-20,197,2015-2025,162.1,42.2
+Magic: The Gathering,Alliances,1996-06-10,199,1993-2004,163.4,31.4
+Magic: The Gathering,Rivals of Ixalan,2018-01-19,205,2015-2025,167.0,35
+Magic: The Gathering,Eldritch Moon,2016-07-22,208,2015-2025,168.8,38.6
+Magic: The Gathering,Hour of Devastation,2017-07-14,209,2015-2025,169.4,31.4
+Magic: The Gathering,The Brothers' War Commander,2022-11-18,209,2015-2025,173.0,35
+Magic: The Gathering,Conspiracy,2014-06-06,210,2005-2014,170.0,42.2
+Magic: The Gathering,Conspiracy: Take the Crown,2016-08-26,222,2015-2025,176.9,35
+Magic: The Gathering,Modern Masters,2013-06-07,229,2005-2014,180.7,35
+Magic: The Gathering,March of the Machine: The Aftermath,2023-05-12,230,2015-2025,181.2,38.6
+Magic: The Gathering,Dominaria United Commander,2022-09-09,240,2015-2025,186.5,35
+Magic: The Gathering,Avacyn Restored,2012-05-04,244,2005-2014,188.5,38.6
+Magic: The Gathering,Rise of the Eldrazi,2010-04-23,248,2005-2014,190.6,35
+Magic: The Gathering,Magic 2010,2009-07-17,249,2005-2014,191.0,31.4
+Magic: The Gathering,Magic 2011,2010-07-16,249,2005-2014,194.6,35
+Magic: The Gathering,Scars of Mirrodin,2010-10-01,249,2005-2014,198.2,38.6
+Magic: The Gathering,Magic 2012,2011-07-15,249,2005-2014,201.8,35
+Magic: The Gathering,Magic 2013,2012-07-13,249,2005-2014,205.4,38.6
+Magic: The Gathering,Gatecrash,2013-02-01,249,2005-2014,191.0,42.2
+Magic: The Gathering,Magic 2014,2013-07-19,249,2005-2014,194.6,27.8
+Magic: The Gathering,Theros,2013-09-27,249,2005-2014,198.2,31.4
+Magic: The Gathering,Modern Masters 2015,2015-05-22,249,2015-2025,201.8,42.2
+Magic: The Gathering,Eternal Masters,2016-06-10,249,2015-2025,205.4,31.4
+Magic: The Gathering,Modern Masters 2017,2017-03-17,249,2015-2025,191.0,45.8
+Magic: The Gathering,Iconic Masters,2017-11-17,249,2015-2025,194.6,24.2
+Magic: The Gathering,Masters 25,2018-03-16,249,2015-2025,198.2,45.8
+Magic: The Gathering,Shards of Alara,2008-10-03,250,2005-2014,191.5,49.4
+Magic: The Gathering,Ultimate Masters,2018-12-07,254,2015-2025,193.5,38.6
+Magic: The Gathering,Modern Horizons,2019-06-14,255,2015-2025,194.0,20.6
+Magic: The Gathering,Battlebond,2018-06-08,256,2015-2025,194.5,53.0
+Magic: The Gathering,Portal,1997-05-01,257,1993-2004,195.0,42.2
+Magic: The Gathering,Innistrad,2011-09-30,264,2005-2014,198.3,27.8
+Magic: The Gathering,Dragons of Tarkir,2015-03-27,264,2015-2025,201.9,45.8
+Magic: The Gathering,Unstable,2017-12-08,268,2015-2025,200.1,24.2
+Magic: The Gathering,Zendikar,2009-10-02,269,2005-2014,200.6,49.4
+Magic: The Gathering,Guilds of Ravnica,2018-10-05,273,2015-2025,202.4,27.8
+Magic: The Gathering,Ravnica Allegiance,2019-01-25,273,2015-2025,206.0,35
+Magic: The Gathering,Return to Ravnica,2012-10-05,274,2005-2014,202.9,20.6
+Magic: The Gathering,Kaladesh,2016-09-30,278,2015-2025,204.7,24.2
+Magic: The Gathering,Dominaria,2018-04-27,280,2015-2025,205.5,42.2
+Magic: The Gathering,Magic 2015,2014-07-18,284,2005-2014,207.3,27.8
+Magic: The Gathering,Ravnica: Clue Edition,2024-02-23,284,2015-2025,210.9,35
+Magic: The Gathering,Marvel's Spider-Man,2025-09-26,286,2015-2025,208.2,45.8
+Magic: The Gathering,Amonkhet,2017-04-28,287,2015-2025,208.6,24.2
+Magic: The Gathering,Magic Origins,2015-07-17,288,2015-2025,209.0,49.4
+Magic: The Gathering,Ixalan,2017-09-29,289,2015-2025,209.4,38.6
+Magic: The Gathering,Khans of Tarkir,2014-09-26,293,2005-2014,211.1,31.4
+Magic: The Gathering,Limited Edition Alpha,1993-08-05,295,1993-2004,212.0,42.2
+Magic: The Gathering,Battle for Zendikar,2015-10-02,299,2015-2025,213.6,38.6
+Magic: The Gathering,Time Spiral,2006-10-06,301,2005-2014,214.5,27.8
+Magic: The Gathering,Lorwyn,2007-10-12,301,2005-2014,218.1,35
+Magic: The Gathering,Limited Edition Beta,1993-10-04,302,1993-2004,214.9,31.4
+Magic: The Gathering,Unlimited Edition,1993-12-01,302,1993-2004,218.5,38.6
+Magic: The Gathering,Shadowmoor,2008-05-02,302,2005-2014,222.1,35
+Magic: The Gathering,Shadows over Innistrad,2016-04-08,302,2015-2025,225.7,38.6
+Magic: The Gathering,Commander 2019,2019-08-23,302,2015-2025,229.3,35
+Magic: The Gathering,Revised Edition,1994-04-11,306,1993-2004,216.5,42.2
+Magic: The Gathering,Summer Magic / Edgar,1994-06-21,306,1993-2004,220.1,31.4
+Magic: The Gathering,Mirrodin,2003-10-02,306,1993-2004,223.7,42.2
+Magic: The Gathering,Ravnica: City of Guilds,2005-10-07,306,2005-2014,227.3,31.4
+Magic: The Gathering,Foreign Black Border,1994-04-11,307,1993-2004,216.9,45.8
+Magic: The Gathering,Champions of Kamigawa,2004-10-01,307,1993-2004,220.5,27.8
+Magic: The Gathering,Commander 2018,2018-08-10,307,2015-2025,224.1,45.8
+Magic: The Gathering,Commander 2017,2017-08-25,309,2015-2025,217.7,24.2
+Magic: The Gathering,Assassin's Creed,2024-07-05,309,2015-2025,221.3,49.4
+Magic: The Gathering,Legends,1994-06-01,310,1993-2004,218.1,20.6
+Magic: The Gathering,War of the Spark,2019-05-03,311,2015-2025,218.5,53.0
+Magic: The Gathering,Commander Anthology Volume II,2018-06-08,312,2015-2025,218.9,17.0
+Magic: The Gathering,Core Set 2019,2018-07-13,314,2015-2025,219.7,56.6
+Magic: The Gathering,Avatar: The Last Airbender Eternal,2025-11-21,317,2015-2025,220.9,13.399999999999999
+Magic: The Gathering,Commander 2011,2011-06-17,318,2005-2014,221.3,60.2
+Magic: The Gathering,Foundations Commander,2024-11-15,319,2015-2025,221.6,24.2
+Magic: The Gathering,Commander Anthology,2017-06-09,320,2015-2025,222.0,20.6
+Magic: The Gathering,Commander 2020,2020-04-17,322,2015-2025,222.8,53.0
+Magic: The Gathering,Forgotten Realms Commander,2021-07-23,331,2015-2025,226.2,27.8
+Magic: The Gathering,Commander 2014,2014-11-07,337,2005-2014,228.4,42.2
+Magic: The Gathering,Commander 2015,2015-11-13,342,2015-2025,230.2,38.6
+Magic: The Gathering,Outlaws of Thunder Junction Commander,2024-04-19,342,2015-2025,233.8,35
+Magic: The Gathering,Core Set 2020,2019-07-12,345,2015-2025,231.3,31.4
+Magic: The Gathering,Tempest,1997-10-14,350,1993-2004,233.1,42.2
+Magic: The Gathering,Mercadian Masques,1999-10-04,350,1993-2004,236.7,38.6
+Magic: The Gathering,Classic Sixth Edition,1999-04-21,351,1993-2004,233.4,27.8
+Magic: The Gathering,Onslaught,2002-10-07,351,1993-2004,237.0,31.4
+Magic: The Gathering,Commander 2016,2016-11-11,351,2015-2025,240.6,35
+Magic: The Gathering,Starter Commander Decks,2022-12-02,352,2015-2025,233.8,45.8
+Magic: The Gathering,Mirage,1996-10-08,353,1993-2004,234.1,24.2
+Magic: The Gathering,Odyssey,2001-10-01,353,1993-2004,237.7,42.2
+Magic: The Gathering,Invasion,2000-10-02,354,1993-2004,234.5,49.4
+Magic: The Gathering,Commander 2013,2013-11-01,356,2005-2014,235.2,20.6
+Magic: The Gathering,Bloomburrow Commander,2024-08-02,356,2015-2025,238.8,27.8
+Magic: The Gathering,Urza's Saga,1998-10-12,357,1993-2004,235.5,53.0
+Magic: The Gathering,Theros Beyond Death,2020-01-24,358,2015-2025,235.9,17.0
+Magic: The Gathering,Murders at Karlov Manor Commander,2024-02-09,358,2015-2025,239.5,45.8
+Magic: The Gathering,The Lost Caverns of Ixalan Commander,2023-11-17,370,2015-2025,240.0,24.2
+Magic: The Gathering,Duskmourn: House of Horror Commander,2024-09-27,373,2015-2025,241.0,38.6
+Magic: The Gathering,Outlaws of Thunder Junction,2024-04-19,374,2015-2025,241.3,31.4
+Magic: The Gathering,Fourth Edition Foreign Black Border,1995-04-01,378,1993-2004,242.6,42.2
+Magic: The Gathering,Fourth Edition,1995-04-01,380,1993-2004,243.2,27.8
+Magic: The Gathering,Wilds of Eldraine,2023-09-08,381,2015-2025,243.6,45.8
+Magic: The Gathering,Ice Age,1995-06-03,383,1993-2004,244.2,24.2
+Magic: The Gathering,Strixhaven: School of Mages,2021-04-23,383,2015-2025,247.8,35
+Magic: The Gathering,Double Masters,2020-08-07,384,2015-2025,244.5,49.4
+Magic: The Gathering,Mystery Booster 2,2024-08-02,385,2015-2025,244.9,38.6
+Magic: The Gathering,The Brothers' War,2022-11-18,387,2015-2025,245.5,31.4
+Magic: The Gathering,March of the Machine,2023-04-21,387,2015-2025,249.1,38.6
+Magic: The Gathering,Ikoria: Lair of Behemoths,2020-04-24,389,2015-2025,246.1,20.6
+Magic: The Gathering,Zendikar Rising,2020-09-25,392,2015-2025,247.1,42.2
+Magic: The Gathering,Innistrad: Midnight Hunt,2021-09-24,392,2015-2025,250.7,31.4
+Magic: The Gathering,Avatar: The Last Airbender,2025-11-21,394,2015-2025,247.7,27.8
+Magic: The Gathering,Throne of Eldraine,2019-10-04,397,2015-2025,248.7,45.8
+Magic: The Gathering,Core Set 2021,2020-07-03,397,2015-2025,252.3,35
+Magic: The Gathering,Bloomburrow,2024-08-02,397,2015-2025,255.9,38.6
+Magic: The Gathering,Modern Horizons 3 Commander,2024-06-14,398,2015-2025,249.0,24.2
+Magic: The Gathering,Edge of Eternities,2025-08-01,400,2015-2025,249.6,49.4
+Magic: The Gathering,Adventures in the Forgotten Realms,2021-07-23,402,2015-2025,250.2,20.6
+Magic: The Gathering,Kaldheim,2021-02-05,407,2015-2025,251.7,42.2
+Magic: The Gathering,Commander 2021,2021-04-23,409,2015-2025,252.3,27.8
+Magic: The Gathering,Time Spiral Remastered,2021-03-19,411,2015-2025,252.9,45.8
+Magic: The Gathering,Innistrad: Crimson Vow,2021-11-19,412,2015-2025,253.2,24.2
+Magic: The Gathering,Tarkir: Dragonstorm Commander,2025-04-11,413,2015-2025,253.5,49.4
+Magic: The Gathering,The Lost Caverns of Ixalan,2023-11-17,415,2015-2025,254.1,20.6
+Magic: The Gathering,Duskmourn: House of Horror,2024-09-27,417,2015-2025,254.7,31.4
+Magic: The Gathering,Tarkir: Dragonstorm,2025-04-11,426,2015-2025,257.4,35
+Magic: The Gathering,Dominaria United,2022-09-09,436,2015-2025,260.2,38.6
+Magic: The Gathering,New Capenna Commander,2022-04-29,447,2015-2025,263.3,35
+Magic: The Gathering,March of the Machine Commander,2023-04-21,450,2015-2025,264.1,38.6
+Magic: The Gathering,Murders at Karlov Manor,2024-02-09,451,2015-2025,264.4,31.4
+Magic: The Gathering,Dominaria Remastered,2023-01-13,457,2015-2025,266.0,42.2
+Magic: The Gathering,Fifth Edition,1997-03-24,460,1993-2004,266.8,27.8
+Magic: The Gathering,Streets of New Capenna,2022-04-29,469,2015-2025,269.2,35
+Magic: The Gathering,Phyrexia: All Will Be One,2023-02-10,479,2015-2025,271.8,38.6
+Magic: The Gathering,Final Fantasy Commander,2025-06-13,486,2015-2025,273.6,35
+Magic: The Gathering,Modern Horizons 2,2021-06-18,492,2015-2025,275.1,31.4
+Magic: The Gathering,Innistrad Remastered,2025-01-24,495,2015-2025,275.9,38.6
+Magic: The Gathering,Jumpstart,2020-07-17,496,2015-2025,276.1,42.2
+Magic: The Gathering,Tenth Edition,2007-07-13,510,2005-2014,279.6,35
+Magic: The Gathering,Unknown Event,2023-02-15,512,2015-2025,280.1,38.6
+Magic: The Gathering,Kamigawa: Neon Dynasty,2022-02-18,514,2015-2025,280.5,31.4
+Magic: The Gathering,Modern Horizons 3,2024-06-14,524,2015-2025,282.9,42.2
+Magic: The Gathering,Ravnica Remastered,2024-01-12,531,2015-2025,284.6,35
+Magic: The Gathering,Innistrad: Double Feature,2022-01-28,535,2015-2025,285.5,38.6
+Magic: The Gathering,Aetherdrift,2025-02-14,553,2015-2025,289.6,35
+Magic: The Gathering,Double Masters 2022,2022-07-08,579,2015-2025,295.3,35
+Magic: The Gathering,Tales of Middle-earth Commander,2023-06-23,591,2015-2025,297.8,38.6
+Magic: The Gathering,Final Fantasy,2025-06-13,598,2015-2025,299.2,35
+Magic: The Gathering,"Warhammer 40,000 Commander",2022-10-07,617,2015-2025,303.1,35
+Magic: The Gathering,Unfinity,2022-10-07,639,2015-2025,307.4,35
+Magic: The Gathering,Seventh Edition,2001-04-11,708,1993-2004,320.1,35
+Magic: The Gathering,Ninth Edition,2005-07-29,710,2005-2014,320.4,38.6
+Magic: The Gathering,Eighth Edition,2003-07-28,711,1993-2004,320.6,31.4
+Magic: The Gathering,Commander Legends,2020-11-20,718,2015-2025,321.8,42.2
+Magic: The Gathering,Foundations,2024-11-15,771,2015-2025,330.6,35
+Magic: The Gathering,Foundations Jumpstart,2024-11-15,779,2015-2025,331.9,38.6
+Magic: The Gathering,Jumpstart 2022,2022-12-02,835,2015-2025,340.5,35
+Magic: The Gathering,The Lord of the Rings: Tales of Middle-earth,2023-06-23,854,2015-2025,343.2,38.6
+Magic: The Gathering,Commander Legends: Battle for Baldur's Gate,2022-06-10,936,2015-2025,354.6,35
+Magic: The Gathering,Commander Masters,2023-08-04,1067,2015-2025,370.7,35
+Magic: The Gathering,Fallout,2024-03-08,1068,2015-2025,370.9,38.6
+Magic: The Gathering,Doctor Who,2023-10-13,1178,2015-2025,383.0,35
+Pokémon,Fossil,1999-10-10,62,1993-2004,19.4,95
+Pokémon,Jungle,1999-06-16,64,1993-2004,23.3,95
+Pokémon,Neo Revelation,2001-09-21,66,1993-2004,27.1,95
+Pokémon,Hidden Fates,2019-08-23,69,2015-2025,32.6,95
+Pokémon,Crown Zenith Galarian Gallery,2023-01-20,70,2015-2025,34.3,98.6
+Pokémon,Shining Fates,2021-02-19,73,2015-2025,39.5,95
+Pokémon,Neo Discovery,2001-06-01,75,1993-2004,42.9,98.6
+Pokémon,Dragon Majesty,2018-09-07,80,2015-2025,50.8,95
+Pokémon,Champion's Path,2020-09-25,80,2015-2025,54.4,95
+Pokémon,Shining Legends,2017-10-06,81,2015-2025,52.4,98.6
+Pokémon,Team Rocket,2000-04-24,83,1993-2004,55.4,91.4
+Pokémon,Pokémon GO,2022-07-01,88,2015-2025,62.6,95
+Pokémon,HS—Undaunted,2010-08-18,91,2005-2014,66.7,95
+Pokémon,Legend Maker,2006-02-01,93,2005-2014,69.4,98.6
+Pokémon,Hidden Fates Shiny Vault,2019-08-23,94,2015-2025,70.8,95
+Pokémon,HS—Unleashed,2010-05-12,96,2005-2014,73.4,98.6
+Pokémon,Team Magma vs Team Aqua,2004-03-01,97,1993-2004,74.6,95
+Pokémon,Emerging Powers,2011-08-31,98,2005-2014,75.9,91.4
+Pokémon,Shrouded Fable,2024-08-02,99,2015-2025,77.2,98.6
+Pokémon,Sandstorm,2003-09-18,100,1993-2004,78.4,95
+Pokémon,Dragon,2003-11-24,100,1993-2004,82.0,95
+Pokémon,Crystal Guardians,2006-08-01,100,2005-2014,85.6,98.6
+Pokémon,Majestic Dawn,2008-05-01,100,2005-2014,89.2,95
+Pokémon,Ancient Origins,2015-08-12,100,2015-2025,92.8,95
+Pokémon,Dragon Frontiers,2006-11-01,101,2005-2014,79.6,91.4
+Pokémon,Base,1999-01-09,102,1993-2004,80.8,98.6
+Pokémon,Hidden Legends,2004-06-01,102,1993-2004,84.4,91.4
+Pokémon,Noble Victories,2011-11-16,102,2005-2014,88.0,102.2
+Pokémon,HS—Triumphant,2010-11-03,103,2005-2014,82.0,102.2
+Pokémon,Next Destinies,2012-02-08,103,2005-2014,85.6,87.8
+Pokémon,Plasma Blast,2013-08-14,105,2005-2014,84.4,105.8
+Pokémon,Great Encounters,2008-02-01,106,2005-2014,85.6,84.2
+Pokémon,Stormfront,2008-11-01,106,2005-2014,89.2,91.4
+Pokémon,Call of Legends,2011-02-09,106,2005-2014,92.8,98.6
+Pokémon,Emerald,2005-05-01,107,2005-2014,86.7,109.4
+Pokémon,Deoxys,2005-02-01,108,2005-2014,87.9,80.6
+Pokémon,Power Keepers,2007-02-02,108,2005-2014,91.5,87.8
+Pokémon,Ruby & Sapphire,2003-07-01,109,1993-2004,89.0,105.8
+Pokémon,Legendary Collection,2002-05-24,110,1993-2004,90.2,84.2
+Pokémon,Flashfire,2014-05-07,110,2005-2014,93.8,91.4
+Pokémon,Neo Genesis,2000-12-16,111,1993-2004,91.3,109.4
+Pokémon,Team Rocket Returns,2004-11-01,111,1993-2004,94.9,102.2
+Pokémon,Holon Phantoms,2006-05-01,111,2005-2014,98.5,95
+Pokémon,Arceus,2009-11-04,111,2005-2014,102.1,98.6
+Pokémon,Dark Explorers,2012-05-09,111,2005-2014,105.7,95
+Pokémon,Roaring Skies,2015-05-06,112,2015-2025,92.4,80.6
+Pokémon,Neo Destiny,2002-02-28,113,1993-2004,93.5,105.8
+Pokémon,Evolutions,2016-11-02,113,2015-2025,97.1,98.6
+Pokémon,Delta Species,2005-10-31,114,2005-2014,94.6,84.2
+Pokémon,Furious Fists,2014-08-13,114,2005-2014,98.2,91.4
+Pokémon,Black & White,2011-04-25,115,2005-2014,95.7,87.8
+Pokémon,FireRed & LeafGreen,2004-09-01,116,1993-2004,96.7,109.4
+Pokémon,Steam Siege,2016-08-03,116,2015-2025,100.3,102.2
+Pokémon,Generations,2016-02-22,117,2015-2025,97.8,105.8
+Pokémon,Rising Rivals,2009-05-16,120,2005-2014,100.9,87.8
+Pokémon,Plasma Freeze,2013-05-08,122,2005-2014,102.9,91.4
+Pokémon,Shining Fates Shiny Vault,2021-02-19,122,2015-2025,106.5,98.6
+Pokémon,Mysterious Treasures,2007-08-01,124,2005-2014,105.0,102.2
+Pokémon,HeartGold & SoulSilver,2010-02-10,124,2005-2014,108.6,91.4
+Pokémon,Phantom Forces,2014-11-05,124,2005-2014,112.2,95
+Pokémon,BREAKpoint,2016-02-03,126,2015-2025,106.9,87.8
+Pokémon,Crimson Invasion,2017-11-03,126,2015-2025,110.5,98.6
+Pokémon,Dragons Exalted,2012-08-15,128,2005-2014,108.9,102.2
+Pokémon,Fates Collide,2016-05-02,129,2015-2025,109.8,105.8
+Pokémon,Base Set 2,2000-02-24,130,1993-2004,110.8,87.8
+Pokémon,Diamond & Pearl,2007-05-01,130,2005-2014,114.4,98.6
+Pokémon,Phantasmal Flames,2025-11-14,130,2015-2025,118.0,95
+Pokémon,Gym Heroes,2000-08-14,132,1993-2004,112.7,91.4
+Pokémon,Gym Challenge,2000-10-16,132,1993-2004,116.3,91.4
+Pokémon,Secret Wonders,2007-11-01,132,2005-2014,119.9,98.6
+Pokémon,Platinum,2009-02-11,133,2005-2014,113.6,102.2
+Pokémon,Plasma Storm,2013-02-06,138,2005-2014,118.2,102.2
+Pokémon,Legendary Treasures,2013-11-06,140,2005-2014,119.9,91.4
+Pokémon,Unseen Forces,2005-08-01,145,2005-2014,124.3,95
+Pokémon,Legends Awakened,2008-08-01,146,2005-2014,125.1,98.6
+Pokémon,XY,2014-02-05,146,2005-2014,128.7,95
+Pokémon,Forbidden Light,2018-05-04,150,2015-2025,128.5,91.4
+Pokémon,Supreme Victors,2009-08-19,153,2005-2014,130.9,98.6
+Pokémon,Boundaries Crossed,2012-11-07,153,2005-2014,134.5,95
+Pokémon,Crown Zenith,2023-01-20,160,2015-2025,136.4,98.6
+Pokémon,Primal Clash,2015-02-04,164,2015-2025,139.5,95
+Pokémon,Expedition Base Set,2002-09-15,165,1993-2004,140.2,98.6
+Pokémon,BREAKthrough,2015-11-04,165,2015-2025,143.8,95
+Pokémon,Black Bolt,2025-07-18,172,2015-2025,145.4,98.6
+Pokémon,Sun & Moon,2017-02-03,173,2015-2025,146.1,91.4
+Pokémon,White Flare,2025-07-18,173,2015-2025,149.7,95
+Pokémon,Stellar Crown,2024-09-13,175,2015-2025,147.5,102.2
+Pokémon,Burning Shadows,2017-08-05,177,2015-2025,148.9,87.8
+Pokémon,Ultra Prism,2018-02-02,178,2015-2025,149.6,98.6
+Pokémon,Guardians Rising,2017-05-05,180,2015-2025,151.0,91.4
+Pokémon,Prismatic Evolutions,2025-01-17,180,2015-2025,154.6,95
+Pokémon,Aquapolis,2003-01-15,182,1993-2004,152.3,102.2
+Pokémon,Skyridge,2003-05-12,182,1993-2004,155.9,98.6
+Pokémon,Battle Styles,2021-03-19,183,2015-2025,153.0,87.8
+Pokémon,Brilliant Stars,2022-02-25,186,2015-2025,155.0,91.4
+Pokémon,Celestial Storm,2018-08-03,187,2015-2025,155.7,105.8
+Pokémon,Mega Evolution,2025-09-26,188,2015-2025,156.3,102.2
+Pokémon,Journey Together,2025-03-28,190,2015-2025,157.7,87.8
+Pokémon,Team Up,2019-02-01,198,2015-2025,162.7,95
+Pokémon,Darkness Ablaze,2020-08-14,201,2015-2025,164.6,98.6
+Pokémon,Vivid Voltage,2020-11-13,203,2015-2025,165.8,91.4
+Pokémon,151,2023-09-22,207,2015-2025,168.2,95
+Pokémon,Rebel Clash,2020-05-01,209,2015-2025,169.4,98.6
+Pokémon,Silver Tempest,2022-11-11,215,2015-2025,172.9,95
+Pokémon,Sword & Shield,2020-02-07,216,2015-2025,173.5,98.6
+Pokémon,Astral Radiance,2022-05-27,216,2015-2025,177.1,95
+Pokémon,Lost Origin,2022-09-09,217,2015-2025,174.1,91.4
+Pokémon,Temporal Forces,2024-03-22,218,2015-2025,174.6,102.2
+Pokémon,Twilight Masquerade,2024-05-24,226,2015-2025,179.1,98.6
+Pokémon,Obsidian Flames,2023-08-11,230,2015-2025,181.2,95
+Pokémon,Chilling Reign,2021-06-18,233,2015-2025,182.8,98.6
+Pokémon,Unbroken Bonds,2019-05-03,234,2015-2025,183.4,91.4
+Pokémon,Evolving Skies,2021-08-27,237,2015-2025,184.9,95
+Pokémon,Lost Thunder,2018-11-02,240,2015-2025,186.5,98.6
+Pokémon,Destined Rivals,2025-05-30,244,2015-2025,188.5,91.4
+Pokémon,Paldean Fates,2024-01-26,245,2015-2025,189.0,95
+Pokémon,Surging Sparks,2024-11-08,252,2015-2025,192.5,98.6
+Pokémon,Scarlet & Violet,2023-03-31,258,2015-2025,195.4,95
+Pokémon,Unified Minds,2019-08-02,260,2015-2025,196.4,98.6
+Pokémon,Paradox Rift,2023-11-03,266,2015-2025,199.2,95
+Pokémon,Cosmic Eclipse,2019-11-01,272,2015-2025,202.0,98.6
+Pokémon,Paldea Evolved,2023-06-09,279,2015-2025,205.1,95
+Pokémon,Fusion Strike,2021-11-12,284,2015-2025,207.3,98.6
+Yu-Gi-Oh!,Tournament Pack: 1st Season,2002-09-01,60,1993-2004,15.3,195
+Yu-Gi-Oh!,Soul of the Duelist,2004-10-01,60,1993-2004,18.9,198.6
+Yu-Gi-Oh!,Rise of Destiny,2004-11-20,60,1993-2004,22.5,195
+Yu-Gi-Oh!,Flaming Eternity,2005-03-01,60,2005-2014,26.1,195
+Yu-Gi-Oh!,The Lost Millennium,2005-06-01,60,2005-2014,29.7,198.6
+Yu-Gi-Oh!,Cybernetic Revolution,2005-08-17,60,2005-2014,15.3,191.4
+Yu-Gi-Oh!,Elemental Energy,2005-11-16,60,2005-2014,18.9,202.2
+Yu-Gi-Oh!,Shadow of Infinity,2006-02-18,60,2005-2014,22.5,198.6
+Yu-Gi-Oh!,Enemy of Justice,2006-05-17,60,2005-2014,26.1,191.4
+Yu-Gi-Oh!,Power of the Duelist,2006-08-16,60,2005-2014,29.7,202.2
+Yu-Gi-Oh!,Cyberdark Impact,2006-11-15,60,2005-2014,15.3,187.8
+Yu-Gi-Oh!,Hidden Arsenal 2,2010-07-15,60,2005-2014,18.9,205.8
+Yu-Gi-Oh!,Hidden Arsenal 3,2010-12-02,60,2005-2014,22.5,191.4
+Yu-Gi-Oh!,Hidden Arsenal 4: Trishula's Triumph,2011-04-15,60,2005-2014,26.1,187.8
+Yu-Gi-Oh!,Hidden Arsenal 5: Steelswarm Invasion,2011-12-01,60,2005-2014,29.7,205.8
+Yu-Gi-Oh!,Hidden Arsenal 6: Omega Xyz,2012-07-24,60,2005-2014,15.3,184.2
+Yu-Gi-Oh!,Number Hunters,2013-07-12,60,2005-2014,18.9,180.6
+Yu-Gi-Oh!,The Secret Forces,2015-02-12,60,2015-2025,22.5,202.2
+Yu-Gi-Oh!,High-Speed Riders,2015-10-01,60,2015-2025,26.1,184.2
+Yu-Gi-Oh!,Wing Raiders,2016-02-11,60,2015-2025,29.7,180.6
+Yu-Gi-Oh!,Destiny Soldiers,2016-11-17,60,2015-2025,15.3,209.4
+Yu-Gi-Oh!,Fusion Enforcers,2017-02-23,60,2015-2025,18.9,213.0
+Yu-Gi-Oh!,Pendulum Evolution,2017-06-22,60,2015-2025,22.5,187.8
+Yu-Gi-Oh!,Spirit Warriors,2017-11-16,60,2015-2025,26.1,209.4
+Yu-Gi-Oh!,Dark Saviors,2018-05-24,60,2015-2025,29.7,213.0
+Yu-Gi-Oh!,Shadows in Valhalla,2018-08-16,60,2015-2025,15.3,177.0
+Yu-Gi-Oh!,Hidden Summoners,2018-11-15,60,2015-2025,18.9,216.6
+Yu-Gi-Oh!,The Infinity Chasers,2019-03-21,60,2015-2025,22.5,205.8
+Yu-Gi-Oh!,Fists of the Gadgets,2019-08-22,60,2015-2025,26.1,177.0
+Yu-Gi-Oh!,Mystic Fighters,2019-11-22,60,2015-2025,29.7,216.6
+Yu-Gi-Oh!,Secret Slayers,2020-04-03,60,2015-2025,15.3,173.4
+Yu-Gi-Oh!,Toon Chaos,2020-06-18,60,2015-2025,18.9,169.8
+Yu-Gi-Oh!,Genesis Impact,2020-12-03,60,2015-2025,22.5,184.2
+Yu-Gi-Oh!,Ancient Guardians,2021-04-29,60,2015-2025,26.1,173.4
+Yu-Gi-Oh!,The Grand Creators,2022-01-27,60,2015-2025,29.7,169.8
+Yu-Gi-Oh!,Tactical Masters,2022-08-25,60,2015-2025,15.3,220.2
+Yu-Gi-Oh!,Amazing Defenders,2023-01-19,60,2015-2025,18.9,223.8
+Yu-Gi-Oh!,Wild Survivors,2023-06-01,60,2015-2025,22.5,213.0
+Yu-Gi-Oh!,Valiant Smashers,2023-11-16,60,2015-2025,26.1,220.2
+Yu-Gi-Oh!,Crossover Breakers,2024-12-05,60,2015-2025,29.7,223.8
+Yu-Gi-Oh!,Justice Hunters,2025-07-31,60,2015-2025,15.3,166.2
+Yu-Gi-Oh!,Phantom Revenge,2025-12-04,60,2015-2025,18.9,162.6
+Yu-Gi-Oh!,Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition,2017-01-12,61,2015-2025,17.4,227.4
+Yu-Gi-Oh!,Legendary Duelists: Soulburning Volcano,2023-08-10,62,2015-2025,19.4,209.4
+Yu-Gi-Oh!,25th Anniversary Ultimate Kaiba Set,2024-03-01,62,2015-2025,23.0,180.6
+Yu-Gi-Oh!,Speed Duel Starter Decks: Ultimate Predators,2019-08-01,63,2015-2025,21.3,177.0
+Yu-Gi-Oh!,Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition,2020-01-23,63,2015-2025,24.9,216.6
+Yu-Gi-Oh!,Speed Duel Starter Decks: Destiny Masters,2019-01-24,64,2015-2025,23.3,169.8
+Yu-Gi-Oh!,King's Court,2021-07-08,65,2015-2025,25.2,223.8
+Yu-Gi-Oh!,Speed Duel Starter Decks: Twisted Nightmares,2020-05-15,66,2015-2025,27.1,166.2
+Yu-Gi-Oh!,Speed Duel Starter Decks: Match of the Millennium,2020-05-15,67,2015-2025,28.9,227.4
+Yu-Gi-Oh!,Maze of Memories,2023-03-09,67,2015-2025,32.5,195
+Yu-Gi-Oh!,Strike of Neos,2007-02-28,69,2005-2014,32.6,191.4
+Yu-Gi-Oh!,Force of the Breaker,2007-05-16,69,2005-2014,36.2,195
+Yu-Gi-Oh!,Speed Duel Starter Decks: Duelists of Tomorrow,2019-01-24,69,2015-2025,39.8,195
+Yu-Gi-Oh!,Hidden Arsenal 7: Knight of Stars,2013-04-26,70,2005-2014,34.3,198.6
+Yu-Gi-Oh!,Dragons of Legend: Unleashed,2016-08-18,73,2015-2025,39.5,198.6
+Yu-Gi-Oh!,25th Anniversary Rarity Collection,2023-11-02,79,2015-2025,49.3,195
+Yu-Gi-Oh!,25th Anniversary Rarity Collection II,2024-05-23,79,2015-2025,52.9,195
+Yu-Gi-Oh!,Battles of Legend: Light's Revenge,2017-07-06,80,2015-2025,50.8,198.6
+Yu-Gi-Oh!,Maze of Millennia,2024-01-18,85,2015-2025,58.3,195
+Yu-Gi-Oh!,2-Player Starter Set,2024-01-26,88,2015-2025,62.6,195
+Yu-Gi-Oh!,Tactical Evolution,2007-08-15,90,2005-2014,65.4,198.6
+Yu-Gi-Oh!,Premium Gold,2014-03-28,90,2005-2014,69.0,195
+Yu-Gi-Oh!,Premium Gold: Return of the Bling,2015-03-19,91,2015-2025,66.7,191.4
+Yu-Gi-Oh!,Battles of Legend: Hero's Revenge,2019-07-11,94,2015-2025,70.8,198.6
+Yu-Gi-Oh!,Battles of Legend: Armageddon,2020-07-23,94,2015-2025,74.4,195
+Yu-Gi-Oh!,Starter Deck: Yugi,2002-03-29,95,1993-2004,72.1,191.4
+Yu-Gi-Oh!,Gladiator's Assault,2007-11-14,95,2005-2014,75.7,198.6
+Yu-Gi-Oh!,Brothers of Legend,2021-12-02,95,2015-2025,79.3,195
+Yu-Gi-Oh!,Starter Deck: Kaiba,2002-03-29,96,1993-2004,73.4,202.2
+Yu-Gi-Oh!,Duelist Nexus,2023-07-27,99,2015-2025,77.2,191.4
+Yu-Gi-Oh!,Phantom Darkness,2008-02-13,100,2005-2014,78.4,202.2
+Yu-Gi-Oh!,Light of Destruction,2008-05-13,100,2005-2014,82.0,198.6
+Yu-Gi-Oh!,The Duelist Genesis,2008-09-02,100,2005-2014,85.6,195
+Yu-Gi-Oh!,Crossroads of Chaos,2008-11-18,100,2005-2014,89.2,198.6
+Yu-Gi-Oh!,Crimson Crisis,2009-03-03,100,2005-2014,92.8,195
+Yu-Gi-Oh!,Raging Battle,2009-05-12,100,2005-2014,78.4,187.8
+Yu-Gi-Oh!,Ancient Prophecy,2009-09-01,100,2005-2014,82.0,191.4
+Yu-Gi-Oh!,Stardust Overdrive,2009-11-17,100,2005-2014,85.6,202.2
+Yu-Gi-Oh!,Duel Terminal 1,2010-01-29,100,2005-2014,89.2,191.4
+Yu-Gi-Oh!,Absolute Powerforce,2010-02-12,100,2005-2014,92.8,198.6
+Yu-Gi-Oh!,The Shining Darkness,2010-05-07,100,2005-2014,78.4,205.8
+Yu-Gi-Oh!,Duel Terminal 2,2010-05-25,100,2005-2014,82.0,187.8
+Yu-Gi-Oh!,Duelist Revolution,2010-08-17,100,2005-2014,85.6,205.8
+Yu-Gi-Oh!,Duel Terminal 3,2010-09-25,100,2005-2014,89.2,187.8
+Yu-Gi-Oh!,Starstrike Blast,2010-11-11,100,2005-2014,92.8,191.4
+Yu-Gi-Oh!,Duel Terminal 4,2011-01-25,100,2005-2014,78.4,184.2
+Yu-Gi-Oh!,Storm of Ragnarok,2011-02-08,100,2005-2014,82.0,184.2
+Yu-Gi-Oh!,Extreme Victory,2011-05-06,100,2005-2014,85.6,180.6
+Yu-Gi-Oh!,Generation Force,2011-08-16,100,2005-2014,89.2,184.2
+Yu-Gi-Oh!,Photon Shockwave,2011-11-10,100,2005-2014,92.8,202.2
+Yu-Gi-Oh!,Order of Chaos,2012-01-20,100,2005-2014,78.4,213.0
+Yu-Gi-Oh!,Galactic Overlord,2012-05-08,100,2005-2014,82.0,209.4
+Yu-Gi-Oh!,Return of the Duelist,2012-08-24,100,2005-2014,85.6,213.0
+Yu-Gi-Oh!,Abyss Rising,2012-11-09,100,2005-2014,89.2,209.4
+Yu-Gi-Oh!,Cosmo Blazer,2013-01-25,100,2005-2014,92.8,187.8
+Yu-Gi-Oh!,Lord of the Tachyon Galaxy,2013-05-17,100,2005-2014,78.4,177.0
+Yu-Gi-Oh!,Judgment of the Light,2013-08-08,100,2005-2014,82.0,177.0
+Yu-Gi-Oh!,Shadow Specters,2013-11-08,100,2005-2014,85.6,216.6
+Yu-Gi-Oh!,Legacy of the Valiant,2014-01-24,100,2005-2014,89.2,177.0
+Yu-Gi-Oh!,Primal Origin,2014-05-16,100,2005-2014,92.8,205.8
+Yu-Gi-Oh!,Duelist Alliance,2014-08-14,100,2005-2014,78.4,216.6
+Yu-Gi-Oh!,The New Challengers,2014-11-06,100,2005-2014,82.0,173.4
+Yu-Gi-Oh!,Secrets of Eternity,2015-01-15,100,2015-2025,85.6,169.8
+Yu-Gi-Oh!,Crossed Souls,2015-05-14,100,2015-2025,89.2,173.4
+Yu-Gi-Oh!,Clash of Rebellions,2015-08-06,100,2015-2025,92.8,184.2
+Yu-Gi-Oh!,Dimension of Chaos,2015-11-05,100,2015-2025,78.4,173.4
+Yu-Gi-Oh!,Breakers of Shadow,2016-01-14,100,2015-2025,82.0,220.2
+Yu-Gi-Oh!,Premium Gold: Infinite Gold,2016-03-17,100,2015-2025,85.6,223.8
+Yu-Gi-Oh!,Shining Victories,2016-05-05,100,2015-2025,89.2,220.2
+Yu-Gi-Oh!,The Dark Illusion,2016-08-04,100,2015-2025,92.8,213.0
+Yu-Gi-Oh!,Invasion: Vengeance,2016-11-03,100,2015-2025,78.4,223.8
+Yu-Gi-Oh!,Raging Tempest,2017-02-09,100,2015-2025,82.0,166.2
+Yu-Gi-Oh!,Duelist Saga,2017-03-30,100,2015-2025,85.6,162.6
+Yu-Gi-Oh!,Maximum Crisis,2017-05-04,100,2015-2025,89.2,166.2
+Yu-Gi-Oh!,Code of the Duelist,2017-08-03,100,2015-2025,92.8,177.0
+Yu-Gi-Oh!,Circuit Break,2017-10-19,100,2015-2025,78.4,166.2
+Yu-Gi-Oh!,Extreme Force,2018-02-01,100,2015-2025,82.0,227.4
+Yu-Gi-Oh!,Flames of Destruction,2018-05-03,100,2015-2025,85.6,231.0
+Yu-Gi-Oh!,Cybernetic Horizon,2018-07-26,100,2015-2025,89.2,227.4
+Yu-Gi-Oh!,Soul Fusion,2018-10-18,100,2015-2025,92.8,216.6
+Yu-Gi-Oh!,Savage Strike,2019-01-31,100,2015-2025,78.4,231.0
+Yu-Gi-Oh!,Dark Neostorm,2019-05-02,100,2015-2025,82.0,159.0
+Yu-Gi-Oh!,Rising Rampage,2019-07-26,100,2015-2025,85.6,234.6
+Yu-Gi-Oh!,Chaos Impact,2019-10-24,100,2015-2025,89.2,159.0
+Yu-Gi-Oh!,Ignition Assault,2020-01-30,100,2015-2025,92.8,173.4
+Yu-Gi-Oh!,Duel Overload,2020-03-19,100,2015-2025,78.4,159.0
+Yu-Gi-Oh!,Alliance Insight,2025-05-01,100,2015-2025,82.0,155.4
+Yu-Gi-Oh!,Retro Pack,2008-07-08,101,2005-2014,79.6,180.6
+Yu-Gi-Oh!,Retro Pack 2,2009-07-28,101,2005-2014,83.2,238.2
+Yu-Gi-Oh!,Eternity Code,2020-04-30,101,2015-2025,86.8,155.4
+Yu-Gi-Oh!,Rise of the Duelist,2020-08-06,101,2015-2025,90.4,180.6
+Yu-Gi-Oh!,Phantom Rage,2020-11-05,101,2015-2025,94.0,209.4
+Yu-Gi-Oh!,Blazing Vortex,2021-02-04,101,2015-2025,79.6,169.8
+Yu-Gi-Oh!,Lightning Overdrive,2021-06-03,101,2015-2025,83.2,151.8
+Yu-Gi-Oh!,Dawn of Majesty,2021-08-12,101,2015-2025,86.8,241.8
+Yu-Gi-Oh!,Burst of Destiny,2021-11-04,101,2015-2025,90.4,169.8
+Yu-Gi-Oh!,Dimension Force,2022-05-19,101,2015-2025,94.0,180.6
+Yu-Gi-Oh!,Power of the Elements,2022-08-04,101,2015-2025,79.6,162.6
+Yu-Gi-Oh!,Darkwing Blast,2022-10-20,101,2015-2025,83.2,148.2
+Yu-Gi-Oh!,Photon Hypernova,2023-02-09,101,2015-2025,86.8,144.6
+Yu-Gi-Oh!,Cyberstorm Access,2023-05-04,101,2015-2025,90.4,223.8
+Yu-Gi-Oh!,Age of Overlord,2023-10-19,101,2015-2025,94.0,220.2
+Yu-Gi-Oh!,Phantom Nightmare,2024-02-08,101,2015-2025,79.6,234.6
+Yu-Gi-Oh!,Legacy of Destruction,2024-04-25,101,2015-2025,83.2,245.4
+Yu-Gi-Oh!,The Infinite Forbidden,2024-07-18,101,2015-2025,86.8,249.0
+Yu-Gi-Oh!,Rage of the Abyss,2024-10-10,101,2015-2025,90.4,162.6
+Yu-Gi-Oh!,Supreme Darkness,2025-01-23,101,2015-2025,94.0,169.8
+Yu-Gi-Oh!,Doom of Dimensions,2025-09-25,101,2015-2025,79.6,238.2
+Yu-Gi-Oh!,Battle of Chaos,2022-02-10,102,2015-2025,80.8,241.8
+Yu-Gi-Oh!,War of the Giants: Round 2,2014-01-17,103,2005-2014,82.0,144.6
+Yu-Gi-Oh!,War of the Giants Reinforcements,2014-01-17,104,2005-2014,83.2,141.0
+Yu-Gi-Oh!,Battles of Legend: Monstrous Revenge,2023-06-22,104,2015-2025,86.8,238.2
+Yu-Gi-Oh!,Battles of Legend: Relentless Revenge,2018-06-28,105,2015-2025,84.4,252.6
+Yu-Gi-Oh!,Battles of Legend: Crystal Revenge,2022-11-17,105,2015-2025,88.0,151.8
+Yu-Gi-Oh!,Duel Power,2019-04-03,106,2015-2025,85.6,137.4
+Yu-Gi-Oh!,Pharaonic Guardian,2003-07-18,108,1993-2004,87.9,148.2
+Yu-Gi-Oh!,Magician's Force,2003-10-10,108,1993-2004,91.5,231.0
+Yu-Gi-Oh!,Legendary Collection Kaiba Mega Pack,2018-03-08,110,2015-2025,90.2,234.6
+Yu-Gi-Oh!,Speed Duel GX: Midterm Paradox,2022-10-06,110,2015-2025,93.8,166.2
+Yu-Gi-Oh!,Legendary Dragon Decks,2017-10-05,111,2015-2025,91.3,155.4
+Yu-Gi-Oh!,Maze of the Master,2025-03-13,111,2015-2025,94.9,223.8
+Yu-Gi-Oh!,Legendary 5D&apos;s Decks,2025-11-06,111,2015-2025,98.5,195
+Yu-Gi-Oh!,Ancient Sanctuary,2004-06-01,112,1993-2004,92.4,238.2
+Yu-Gi-Oh!,Dark Legends,2008-11-21,113,2005-2014,93.5,227.4
+Yu-Gi-Oh!,Ra Yellow Mega Pack,2012-02-17,113,2005-2014,97.1,198.6
+Yu-Gi-Oh!,Magnificent Mavens,2022-11-03,114,2015-2025,94.6,162.6
+Yu-Gi-Oh!,Legendary Hero Decks,2018-10-04,117,2015-2025,97.8,191.4
+Yu-Gi-Oh!,Battles of Legend: Terminal Revenge,2024-06-20,118,2015-2025,98.8,202.2
+Yu-Gi-Oh!,Legendary Duelists: Season 1,2020-07-02,121,2015-2025,101.9,198.6
+Yu-Gi-Oh!,Yugi's Legendary Decks,2015-11-12,126,2015-2025,106.9,195
+Yu-Gi-Oh!,Legendary Decks II,2016-10-06,130,2015-2025,110.8,195
+Yu-Gi-Oh!,Legendary Duelists: Season 2,2021-01-21,131,2015-2025,111.7,198.6
+Yu-Gi-Oh!,Ghosts From the Past,2021-04-15,132,2015-2025,112.7,191.4
+Yu-Gi-Oh!,Legendary Duelists: Season 3,2022-07-21,138,2015-2025,118.2,195
+Yu-Gi-Oh!,Dragons of Legend: The Complete Series,2020-09-10,149,2015-2025,127.6,195
+Yu-Gi-Oh!,Maximum Gold: El Dorado,2021-11-18,152,2015-2025,130.1,198.6
+Yu-Gi-Oh!,Maximum Gold,2020-11-12,162,2015-2025,138.0,195
+Yu-Gi-Oh!,Battles of Legend: Chapter 1,2024-02-22,163,2015-2025,138.7,198.6
+Yu-Gi-Oh!,Hidden Arsenal: Chapter 1,2022-02-24,177,2015-2025,148.9,195
+Yu-Gi-Oh!,Battles of Legend: Monster Mayhem,2025-08-28,177,2015-2025,152.5,198.6
+Yu-Gi-Oh!,Ghosts From the Past: The 2nd Haunting,2022-05-05,187,2015-2025,155.7,195
+Yu-Gi-Oh!,Speed Duel: Streets of Battle City,2023-08-24,193,2015-2025,159.6,195
+Yu-Gi-Oh!,Legacy of Darkness,2003-06-06,202,1993-2004,165.2,195
+Yu-Gi-Oh!,Spell Ruler,2002-09-16,208,1993-2004,168.8,195
+Yu-Gi-Oh!,Dark Crisis,2003-12-01,212,1993-2004,171.2,198.6
+Yu-Gi-Oh!,Battle Pack 2: War of the Giants,2013-06-28,215,2005-2014,172.9,195
+Yu-Gi-Oh!,Speed Duel GX: Duel Academy Box,2022-03-17,218,2015-2025,174.6,191.4
+Yu-Gi-Oh!,Battle Pack: Epic Dawn,2012-05-24,220,2005-2014,175.8,198.6
+Yu-Gi-Oh!,Speed Duel GX: Duelists of Shadows,2023-03-30,221,2015-2025,176.3,202.2
+Yu-Gi-Oh!,Speed Duel: Battle City Box,2020-11-26,223,2015-2025,177.4,195
+Yu-Gi-Oh!,Invasion of Chaos,2004-03-01,224,1993-2004,178.0,187.8
+Yu-Gi-Oh!,Dark Revelation Volume 2,2005-10-20,228,2005-2014,180.2,198.6
+Yu-Gi-Oh!,2018 Mega-Tin Mega Pack,2018-08-30,233,2015-2025,182.8,195
+Yu-Gi-Oh!,Magic Ruler,2002-09-16,235,1993-2004,183.9,198.6
+Yu-Gi-Oh!,Battle Pack 3: Monster League,2014-07-31,237,2005-2014,184.9,191.4
+Yu-Gi-Oh!,2016 Mega-Tin Mega Pack,2016-09-01,239,2015-2025,186.0,202.2
+Yu-Gi-Oh!,2017 Mega-Tin Mega Pack,2017-08-24,239,2015-2025,189.6,195
+Yu-Gi-Oh!,Dark Revelation Volume 3,2006-11-25,240,2005-2014,186.5,187.8
+Yu-Gi-Oh!,Dark Revelation Volume 4,2007-11-14,245,2005-2014,189.0,198.6
+Yu-Gi-Oh!,2020 Tin of Lost Memories Mega Pack,2020-08-27,246,2015-2025,189.6,191.4
+Yu-Gi-Oh!,2014 Mega-Tin Mega Pack,2014-08-28,247,2005-2014,190.1,202.2
+Yu-Gi-Oh!,2015 Mega-Tin Mega Pack,2015-09-17,247,2015-2025,193.7,195
+Yu-Gi-Oh!,Legendary Collection 5D's Mega Pack,2014-10-23,256,2005-2014,194.5,198.6
+Yu-Gi-Oh!,2021 Tin of Ancient Battles,2021-09-30,258,2015-2025,195.4,191.4
+Yu-Gi-Oh!,Dark Beginning 1,2004-10-12,262,1993-2004,197.3,195
+Yu-Gi-Oh!,Dark Beginning 2,2005-07-27,264,2005-2014,198.3,198.6
+Yu-Gi-Oh!,Legendary Collection 2: The Duel Academy Years Mega Pack,2011-10-04,266,2005-2014,199.2,191.4
+Yu-Gi-Oh!,Dark Revelation Volume 1,2005-03-19,267,2005-2014,199.7,202.2
+Yu-Gi-Oh!,2019 Gold Sarcophagus Tin Mega Pack,2019-08-29,270,2015-2025,201.0,195
+Yu-Gi-Oh!,2022 Tin of the Pharaoh's Gods,2022-09-14,275,2015-2025,203.3,198.6
+Yu-Gi-Oh!,Quarter Century Bonanza,2024-11-07,276,2015-2025,203.8,191.4
+Yu-Gi-Oh!,25th Anniversary Tin: Dueling Heroes Mega Pack,2023-09-07,283,2015-2025,206.9,195
+Yu-Gi-Oh!,Quarter Century Stampede,2025-04-10,296,2015-2025,212.4,195
+Yu-Gi-Oh!,Legendary Collection 4: Joey's World Mega Pack,2013-10-11,298,2005-2014,213.2,198.6
+Yu-Gi-Oh!,Legendary Collection 3: Yugi's World Mega Pack,2012-09-29,306,2005-2014,216.5,195
+Yu-Gi-Oh!,Pharaoh's Servant,2002-10-20,315,1993-2004,220.1,198.6
+Yu-Gi-Oh!,Labyrinth of Nightmare,2003-03-01,315,1993-2004,223.7,195
+Yu-Gi-Oh!,Legend of Blue Eyes White Dragon,2002-03-08,355,1993-2004,234.8,195
+Yu-Gi-Oh!,25th Anniversary Tin: Dueling Mirrors,2024-09-19,398,2015-2025,249.0,195
+Yu-Gi-Oh!,Metal Raiders,2002-06-26,432,1993-2004,259.1,195
+Yu-Gi-Oh!,2025 Mega-Pack Tin,2025-09-04,450,2015-2025,264.1,195
