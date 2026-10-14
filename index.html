@@ -1,31 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-  
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading card games: from play to collectibles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  
-<div id="choropleth_map"></div>
-<div id="symbol_map"></div>
 
-<script type="text/javascript">
+<header class="hero wrap">
+  <p class="kicker">Magic: The Gathering, Pokémon and Yu-Gi-Oh!, 1993 to 2026</p>
+  <h1>Trading card games: from play to collectibles</h1>
+  <p class="standfirst">How card types, sets and rarity changed over 30 years. Three games that
+    began at the kitchen table now print thousands of new cards a year.</p>
+  <div class="game-key"><span class="k-mtg">Magic: The Gathering</span><span class="k-pkm">Pokémon</span><span class="k-ygo">Yu-Gi-Oh!</span></div>
+  <div class="stats">
+    <div class="stat"><span class="big">1,292</span><span class="what">card sets released in English since 1993</span></div>
+    <div class="stat"><span class="big">11,631</span><span class="what">new cards printed in 2024, up from about 1,300 in 2000</span></div>
+    <div class="stat"><span class="big">27%</span><span class="what">of Yu-Gi-Oh! printings now use special finishes, up from 4%</span></div>
+  </div>
+  <p class="reading">A <strong>set</strong> is one release of new cards. A <strong>printing</strong> is one card
+    in one set at one rarity. Figures cover English releases. Most charts respond to hovering,
+    clicking or the controls beneath them.</p>
+</header>
 
-  var spec2 = "js/map8_choropleth.vg.json";
-  vegaEmbed('#choropleth_map', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+<main class="wrap">
 
-  var spec3 = "js/map9_symbol.vg.json";
-  vegaEmbed('#symbol_map', spec3).then(function(result) {
-  }).catch(console.error);
+  <!-- 01 -->
+  <section id="s01">
+    <div class="sec-head">
+      <div><span class="sec-no">01/06</span><h2>Where did it all begin?</h2></div>
+      <p>Magic came first in 1993. Pokémon reached English players in 1999, and Yu-Gi-Oh! followed in 2002.</p>
+    </div>
+    <div class="grid">
+      <article class="panel span-12">
+        <h3>Three games, three lifetimes</h3>
+        <p class="dek">Each tick is one card set released in English, 1993-2026. Circles mark key moments.</p>
+        <div class="chart" id="chart1"></div>
+        <p class="note">Hover a tick for the set name and size. Drag across the lower strip to zoom into a period; double-click to reset.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section id="s02">
+    <div class="sec-head">
+      <div><span class="sec-no">02/06</span><h2>More cards, more sets</h2></div>
+      <p>For twenty years output grew slowly. Since 2020 it has surged, and Magic's sets have become much bigger.</p>
+    </div>
+    <div class="grid">
+      <article class="panel span-6">
+        <h3>Cards printed per year</h3>
+        <p class="dek">New cards in English sets, 1993-2025</p>
+        <div class="chart" id="chart2"></div>
+        <p class="note">Stream thickness is that year's total. Click a game in the legend to isolate it.</p>
+      </article>
+      <article class="panel span-6">
+        <h3>How big is a set?</h3>
+        <p class="dek">Each dot is one full-size set (60 or more cards), placed by its number of cards on a log scale.</p>
+        <div class="chart" id="chart3"></div>
+        <p class="note">Sets of identical size are fanned out slightly so every dot stays visible.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section id="s03">
+    <div class="sec-head">
+      <div><span class="sec-no">03/06</span><h2>What kind of cards?</h2></div>
+      <p>Yu-Gi-Oh! keeps adding new ways to summon monsters, usually alongside a new anime series.</p>
+    </div>
+    <div class="grid">
+      <article class="panel span-7">
+        <h3>Card types over time</h3>
+        <p class="dek">Share of each year's new Yu-Gi-Oh! cards by type, 2002-2025</p>
+        <div class="chart" id="chart4"></div>
+        <p class="note">A card is counted in the year it was first printed. Hover a row to follow one type.</p>
+      </article>
+      <article class="panel span-5">
+        <h3>Then and now</h3>
+        <p class="dek">Share of new Yu-Gi-Oh! cards by type (%)</p>
+        <p class="callout">Normal Monsters fell from 17.5% to 0.5%. Four new summon types now take 4-5% each.</p>
+        <div class="chart" id="chart5"></div>
+        <p class="note">New summon types had no cards in 2002-2006, so their lines start at zero.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section id="s04">
+    <div class="sec-head">
+      <div><span class="sec-no">04/06</span><h2>Rarity gets complicated</h2></div>
+      <p>Early packs were mostly commons. Today more than a quarter of printings use special foil finishes.</p>
+    </div>
+    <figure class="ladder">
+      <ol><li>Common</li><li>Rare</li><li>Super Rare</li><li>Ultra Rare</li><li>Secret Rare</li><li>Special finishes</li></ol>
+      <figcaption>Explanatory figure, not a chart: Yu-Gi-Oh! rarity tiers from most to least common.</figcaption>
+    </figure>
+    <div class="grid">
+      <article class="panel span-5">
+        <h3>One pack</h3>
+        <p class="dek">If a Yu-Gi-Oh! pack held 100 cards, by rarity tier</p>
+        <p class="callout">Commons fell from 65% to 31%; special finishes rose from 4% to 27%.</p>
+        <div class="chart" id="chart7"></div>
+        <p class="note">Hover a tier, or click it in the legend, to compare both periods.</p>
+      </article>
+      <article class="panel span-7">
+        <h3>Rarity tiers over time</h3>
+        <p class="dek">Yu-Gi-Oh! printings per year for each rarity, ordered by first appearance. Each ridge is scaled to its own peak; darker means newer.</p>
+        <div class="chart" id="chart6"></div>
+        <p class="note">Rarities seen in fewer than 200 printings are left out.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section id="s05">
+    <div class="sec-head">
+      <div><span class="sec-no">05/06</span><h2>A global hobby</h2></div>
+      <p>Search interest shows where the hobby lives now. The Magic World Championship shows how it travelled.</p>
+    </div>
+    <div class="grid">
+      <article class="panel span-12">
+        <h3>Where the world plays</h3>
+        <p class="dek">Google Trends search interest in collectible card games, Sep 2021 to Sep 2026</p>
+        <div class="chart" id="map8"></div>
+        <p class="note">Scores are relative: 100 marks the country where these searches take the largest share of all searches, not the most searches in total.</p>
+      </article>
+      <article class="panel span-6">
+        <h3>Where the biggest events are</h3>
+        <p class="dek">Magic World Championship host cities, 1994-2025. Circle area shows times hosted.</p>
+        <div class="chart" id="map9"></div>
+        <p class="note">Coordinates are city centres. Move the slider to keep only repeat hosts.</p>
+      </article>
+      <article class="panel span-6">
+        <h3>30 years of moving venues</h3>
+        <p class="dek">Each line links one World Championship to the next, 1994-2025</p>
+        <div class="chart" id="map10"></div>
+        <p class="note">Lines follow the shortest path on the globe, so Pacific crossings leave one edge and re-enter at the other. Move the slider to replay the tour.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section id="s06">
+    <div class="sec-head">
+      <div><span class="sec-no">06/06</span><h2>Then → now</h2></div>
+      <div class="then-now">
+        <span class="then">fewer sets</span><span class="arrow">→</span><span class="now">more sets</span>
+        <span class="then">simple rarity</span><span class="arrow">→</span><span class="now">complex rarity</span>
+        <span class="then">local hobby</span><span class="arrow">→</span><span class="now">global culture</span>
+      </div>
+    </div>
+    <div class="grid">
+      <article class="panel span-6">
+        <h3>Price gap</h3>
+        <p class="dek">Median listed price (US$) of Yu-Gi-Oh! printings by rarity tier, printed 2002-2006 versus 2021-2025</p>
+        <div class="chart" id="chart11"></div>
+        <p class="note">Prices are the listed price of each printing as of September 2026, not the original price. Printings without a listed price are excluded.</p>
+      </article>
+      <article class="panel span-6">
+        <h3>Three games compared</h3>
+        <p class="dek">Each panel is one game on a shared scale. Use the menu to compare sets, cards or set size.</p>
+        <div class="chart" id="chart12"></div>
+        <p class="note">Yu-Gi-Oh! releases many small decks and tins alongside its main sets.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div class="about">
+      <div class="about-col">
+        <h4>Sources</h4>
+        <ul>
+          <li><a href="https://scryfall.com/docs/api/sets">Scryfall API</a>, <code>/sets</code> endpoint. Every Magic: The Gathering set with release date, type and card count.</li>
+          <li><a href="https://pokemontcg.io/">Pokémon TCG API</a>, <code>/v2/sets</code>. English Pokémon sets with release date and card total.</li>
+          <li><a href="https://ygoprodeck.com/api-guide/">YGOPRODeck API</a>, <code>cardsets.php</code> and <code>cardinfo.php</code>. Yu-Gi-Oh! sets, every card's type, each printing's rarity and listed price. Community-maintained.</li>
+          <li><a href="https://trends.google.com">Google Trends</a>, "Collectible card game" topic, interest by region, worldwide, September 2021 to September 2026.</li>
+          <li><a href="https://en.wikipedia.org/wiki/Magic:_The_Gathering_World_Championship">Wikipedia</a>, "Magic: The Gathering World Championship", host cities 1994-2025.</li>
+          <li>Country boundaries: Natural Earth 1:110m admin-0 countries, TopoJSON from the FIT3179 studio template.</li>
+        </ul>
+        <p>All API data retrieved 28 September 2026.</p>
+      </div>
+      <div class="about-col">
+        <h4>Notes on the data</h4>
+        <p>Figures cover English-language releases only. Digital-only Magic sets, tokens, promotional sets and memorabilia
+          are excluded, as are Magic's The List and Secret Lair, which collect cards over several years under one date.
+          Per-year charts stop at 2025, the last complete year.</p>
+        <p>Scryfall card counts include alternative artworks, so recent Magic sets look larger partly because of those extra versions.
+          YGOPRODeck is maintained by players, so some rarity labels needed cleaning and a few printings may be missing.</p>
+        <p>Google Trends scores are relative within each country and capped at 100; they show share of searches, not number of players.
+          Listed prices are a September 2026 snapshot, not original retail prices. World Championship coordinates are city centres
+          added by the author; the 2021 event was held online, so it has no host city.</p>
+      </div>
+      <div class="about-col">
+        <h4>Method</h4>
+        <p>Raw API files were cleaned and aggregated with a Python script, <code>scripts/prepare_data.py</code>, which writes every
+          CSV in the <code>data</code> folder. Each chart is a separate Vega-Lite specification in the <code>js</code> folder,
+          embedded with vega-embed and published on GitHub Pages.</p>
+        <p>Page template and interaction patterns adapted from the FIT3179 studio examples.</p>
+        <h4>About</h4>
+        <p>Liyan Dai (Yan), student ID 34901426. FIT3179 Data Visualisation 2, Monash University.<br>
+          Published 9 October 2026.</p>
+        <p>AI statement: [Describe how you used AI tools, for example: Claude assisted with data-cleaning scripts,
+          Vega-Lite specifications, page design and copy editing. All content was checked by the author.]</p>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // 所有图共用的设置 / settings shared by every chart
+  var opts = {
+    actions: false,
+    config: {
+      background: null,
+      view: {stroke: null},
+      font: "Inter, Helvetica Neue, Helvetica, Arial, sans-serif",
+      axis: {labelColor: "#5a5a64", titleColor: "#5a5a64", domainColor: "#c9c9c0", tickColor: "#c9c9c0", gridColor: "#ececE6", labelFontSize: 11, titleFontWeight: 600},
+      legend: {labelColor: "#383844", titleColor: "#383844", labelFontSize: 11, titleFontWeight: 600},
+      header: {labelColor: "#23213a"},
+      text: {color: "#383844"}
+    }
+  };
+  var charts = {
+    chart1: "chart1_timeline", chart2: "chart2_streamgraph", chart3: "chart3_beeswarm",
+    chart4: "chart4_heatmap", chart5: "chart5_slope", chart6: "chart6_ridgeline",
+    chart7: "chart7_waffle", map8: "map8_choropleth", map9: "map9_symbol",
+    map10: "map10_flow", chart11: "chart11_dumbbell", chart12: "chart12_small_multiples"
+  };
+  for (var id in charts) {
+    (function (id) {
+      vegaEmbed('#' + id, 'js/' + charts[id] + '.vg.json', opts).catch(function (err) {
+        console.error(err);
+        document.getElementById(id).innerHTML = '<p class="note">This chart could not load: ' + err.message + '</p>';
+      });
+    })(id);
+  }
 </script>
 
 </body>
