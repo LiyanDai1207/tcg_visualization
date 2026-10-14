@@ -40,7 +40,8 @@
         "ticks": false,
         "domain": false,
         "labelFontWeight": "bold",
-        "labelColor": "#333"
+        "labelColor": "#333",
+        "orient": "top"
       },
       "scale": {
         "padding": 0.15
@@ -220,7 +221,7 @@
       },
       "encoding": {
         "text": {
-          "value": "Synchro, Xyz, Pendulum, Link"
+          "value": "4 new summon types"
         }
       }
     }
