@@ -36,7 +36,8 @@
               "scale": {
                 "domain": {
                   "param": "brush"
-                }
+                },
+                "padding": 14
               }
             },
             "y": {
@@ -126,14 +127,14 @@
               {
                 "game": "Pokémon",
                 "date": "1999-01-09",
-                "label": "1999: Base Set reaches English players",
+                "label": "1999: Base Set in English",
                 "pos": "up",
                 "align": "left"
               },
               {
                 "game": "Pokémon",
                 "date": "2003-06-18",
-                "label": "2003: The Pokémon Company takes over from Wizards",
+                "label": "2003: Pokémon Company takes over",
                 "pos": "down",
                 "align": "left"
               },
@@ -154,7 +155,7 @@
               {
                 "game": "Yu-Gi-Oh!",
                 "date": "2008-12-01",
-                "label": "2008: Konami takes over from Upper Deck",
+                "label": "2008: Konami takes over",
                 "pos": "down",
                 "align": "left"
               },
@@ -189,7 +190,8 @@
               "scale": {
                 "domain": {
                   "param": "brush"
-                }
+                },
+                "padding": 14
               }
             },
             "y": {
@@ -251,16 +253,16 @@
               {
                 "game": "Pokémon",
                 "date": "1999-01-09",
-                "label": "1999: Base Set reaches English players",
+                "label": "1999: Base Set in English",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
                 "date": "2003-06-18",
-                "label": "2003: The Pokémon Company takes over from Wizards",
+                "label": "2003: Pokémon Company takes over",
                 "pos": "down",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
@@ -274,14 +276,14 @@
                 "date": "2002-03-08",
                 "label": "2002: Legend of Blue Eyes White Dragon",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
                 "date": "2008-12-01",
-                "label": "2008: Konami takes over from Upper Deck",
+                "label": "2008: Konami takes over",
                 "pos": "down",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
@@ -300,8 +302,8 @@
           "mark": {
             "type": "text",
             "align": "left",
-            "dy": -26,
-            "dx": 4,
+            "dy": -24,
+            "dx": -6,
             "fontSize": 10.5,
             "color": "#333",
             "clip": true
@@ -319,7 +321,8 @@
               "scale": {
                 "domain": {
                   "param": "brush"
-                }
+                },
+                "padding": 14
               }
             },
             "y": {
@@ -378,16 +381,16 @@
               {
                 "game": "Pokémon",
                 "date": "1999-01-09",
-                "label": "1999: Base Set reaches English players",
+                "label": "1999: Base Set in English",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
                 "date": "2003-06-18",
-                "label": "2003: The Pokémon Company takes over from Wizards",
+                "label": "2003: Pokémon Company takes over",
                 "pos": "down",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
@@ -401,14 +404,142 @@
                 "date": "2002-03-08",
                 "label": "2002: Legend of Blue Eyes White Dragon",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
                 "date": "2008-12-01",
-                "label": "2008: Konami takes over from Upper Deck",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'up' && datum.align == 'center'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dy": -24,
+            "dx": 0,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
                 "pos": "down",
                 "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
@@ -427,8 +558,8 @@
           "mark": {
             "type": "text",
             "align": "right",
-            "dy": -26,
-            "dx": -4,
+            "dy": -24,
+            "dx": 6,
             "fontSize": 10.5,
             "color": "#333",
             "clip": true
@@ -446,7 +577,8 @@
               "scale": {
                 "domain": {
                   "param": "brush"
-                }
+                },
+                "padding": 14
               }
             },
             "y": {
@@ -505,16 +637,16 @@
               {
                 "game": "Pokémon",
                 "date": "1999-01-09",
-                "label": "1999: Base Set reaches English players",
+                "label": "1999: Base Set in English",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
                 "date": "2003-06-18",
-                "label": "2003: The Pokémon Company takes over from Wizards",
+                "label": "2003: Pokémon Company takes over",
                 "pos": "down",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
@@ -528,14 +660,14 @@
                 "date": "2002-03-08",
                 "label": "2002: Legend of Blue Eyes White Dragon",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
                 "date": "2008-12-01",
-                "label": "2008: Konami takes over from Upper Deck",
+                "label": "2008: Konami takes over",
                 "pos": "down",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
@@ -554,8 +686,8 @@
           "mark": {
             "type": "text",
             "align": "left",
-            "dy": 30,
-            "dx": 4,
+            "dy": 26,
+            "dx": -6,
             "fontSize": 10.5,
             "color": "#333",
             "clip": true
@@ -573,7 +705,8 @@
               "scale": {
                 "domain": {
                   "param": "brush"
-                }
+                },
+                "padding": 14
               }
             },
             "y": {
@@ -632,16 +765,16 @@
               {
                 "game": "Pokémon",
                 "date": "1999-01-09",
-                "label": "1999: Base Set reaches English players",
+                "label": "1999: Base Set in English",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
                 "date": "2003-06-18",
-                "label": "2003: The Pokémon Company takes over from Wizards",
+                "label": "2003: Pokémon Company takes over",
                 "pos": "down",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Pokémon",
@@ -655,14 +788,142 @@
                 "date": "2002-03-08",
                 "label": "2002: Legend of Blue Eyes White Dragon",
                 "pos": "up",
-                "align": "left"
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
                 "date": "2008-12-01",
-                "label": "2008: Konami takes over from Upper Deck",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'down' && datum.align == 'center'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dy": 26,
+            "dx": 0,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
                 "pos": "down",
                 "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
               },
               {
                 "game": "Yu-Gi-Oh!",
@@ -681,8 +942,8 @@
           "mark": {
             "type": "text",
             "align": "right",
-            "dy": 30,
-            "dx": -4,
+            "dy": 26,
+            "dx": 6,
             "fontSize": 10.5,
             "color": "#333",
             "clip": true
@@ -700,7 +961,8 @@
               "scale": {
                 "domain": {
                   "param": "brush"
-                }
+                },
+                "padding": 14
               }
             },
             "y": {
