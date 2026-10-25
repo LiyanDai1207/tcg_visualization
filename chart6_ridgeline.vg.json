@@ -1,0 +1,273 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ridgeline plot of Yu-Gi-Oh! printings per year for each rarity, rows ordered by the year the rarity first appeared.",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/ygo_rarity_by_year.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "row": "number",
+        "year": "number",
+        "printings": "number",
+        "first_year": "number",
+        "norm": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "printings",
+          "as": "all_max"
+        }
+      ]
+    },
+    {
+      "calculate": "scaleMode == 'own' ? datum.norm : datum.printings / datum.all_max",
+      "as": "h"
+    },
+    {
+      "calculate": "datum.row + 1",
+      "as": "base"
+    },
+    {
+      "calculate": "datum.row + 1 - datum.h * 1.6",
+      "as": "top"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "fillOpacity": 0.9,
+        "stroke": "white",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [
+              2002,
+              2025
+            ]
+          },
+          "axis": {
+            "format": "d",
+            "grid": false,
+            "values": [
+              2002,
+              2006,
+              2010,
+              2014,
+              2018,
+              2022
+            ],
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "y": {
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              -0.8,
+              17.1
+            ],
+            "range": [
+              0,
+              300
+            ],
+            "zero": false
+          },
+          "field": "top"
+        },
+        "y2": {
+          "field": "base"
+        },
+        "detail": {
+          "field": "rarity"
+        },
+        "fill": {
+          "field": "first_year",
+          "type": "quantitative",
+          "legend": null,
+          "scale": {
+            "domain": [
+              1996,
+              2023
+            ],
+            "range": [
+              "#cbc6e0",
+              "#2a2257"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rarity",
+            "title": "Rarity"
+          },
+          {
+            "field": "year",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "printings",
+            "type": "quantitative",
+            "title": "Printings"
+          },
+          {
+            "field": "first_year",
+            "type": "quantitative",
+            "title": "First appeared",
+            "format": "d"
+          }
+        ],
+        "fillOpacity": {
+          "condition": {
+            "param": "ridge",
+            "empty": true,
+            "value": 0.95
+          },
+          "value": 0.25
+        }
+      },
+      "params": [
+        {
+          "name": "ridge",
+          "select": {
+            "type": "point",
+            "fields": [
+              "rarity"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2002"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -6,
+        "fontSize": 10,
+        "color": "#444"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [
+              2002,
+              2025
+            ]
+          },
+          "axis": {
+            "format": "d",
+            "grid": false,
+            "values": [
+              2002,
+              2006,
+              2010,
+              2014,
+              2018,
+              2022
+            ],
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "y": {
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              -0.8,
+              17.1
+            ],
+            "range": [
+              0,
+              300
+            ],
+            "zero": false
+          },
+          "field": "base"
+        },
+        "text": {
+          "field": "rarity"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 10,
+        "lineHeight": 13,
+        "color": "#444",
+        "text": [
+          "Starlight Rare (2019) and",
+          "Quarter Century Secret Rare",
+          "(2023, for the 25th anniversary)",
+          "are the newest chase rarities."
+        ]
+      },
+      "encoding": {
+        "x": {
+          "value": 4
+        },
+        "y": {
+          "value": 232
+        }
+      }
+    }
+  ],
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "params": [
+    {
+      "name": "scaleMode",
+      "value": "own",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "own",
+          "shared"
+        ],
+        "labels": [
+          "Each rarity's own peak",
+          "Shared scale (compare counts)"
+        ],
+        "name": "Scale: "
+      }
+    }
+  ]
+}

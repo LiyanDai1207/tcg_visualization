@@ -1,0 +1,1071 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Annotated timeline: one tick per English card set for each game, with key milestones.",
+  "vconcat": [
+    {
+      "width": 760,
+      "height": 260,
+      "layer": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/sets_all.csv",
+            "format": {
+              "type": "csv",
+              "parse": {
+                "cards": "number"
+              }
+            }
+          },
+          "mark": {
+            "type": "tick",
+            "thickness": 1.2,
+            "size": 30,
+            "opacity": 0.5,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "color": {
+              "field": "game",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                "domain": [
+                  "Magic: The Gathering",
+                  "Pokémon",
+                  "Yu-Gi-Oh!"
+                ],
+                "range": [
+                  "#b5562c",
+                  "#c99a1e",
+                  "#4b3f8f"
+                ]
+              }
+            },
+            "tooltip": [
+              {
+                "field": "set_name",
+                "title": "Set"
+              },
+              {
+                "field": "date",
+                "type": "temporal",
+                "title": "Released",
+                "format": "%d %B %Y"
+              },
+              {
+                "field": "cards",
+                "type": "quantitative",
+                "title": "Cards in set"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "mark": {
+            "type": "circle",
+            "size": 70,
+            "fill": "white",
+            "stroke": "#333",
+            "strokeWidth": 1.5,
+            "opacity": 1,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "tooltip": [
+              {
+                "field": "label",
+                "title": "Milestone"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'up' && datum.align == 'left'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dy": -24,
+            "dx": -6,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'up' && datum.align == 'center'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dy": -24,
+            "dx": 0,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'up' && datum.align == 'right'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dy": -24,
+            "dx": 6,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'down' && datum.align == 'left'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dy": 26,
+            "dx": -6,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'down' && datum.align == 'center'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dy": 26,
+            "dx": 0,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "game": "Magic: The Gathering",
+                "date": "1993-08-05",
+                "label": "1993: Alpha launches Magic",
+                "pos": "up",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "1994-08-18",
+                "label": "1994: first World Championship",
+                "pos": "down",
+                "align": "left"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2018-09-27",
+                "label": "2018: MTG Arena goes digital",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Magic: The Gathering",
+                "date": "2019-10-04",
+                "label": "2019: collector variants arrive",
+                "pos": "down",
+                "align": "right"
+              },
+              {
+                "game": "Pokémon",
+                "date": "1999-01-09",
+                "label": "1999: Base Set in English",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2003-06-18",
+                "label": "2003: Pokémon Company takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Pokémon",
+                "date": "2021-05-14",
+                "label": "2021: collecting boom empties shelves",
+                "pos": "up",
+                "align": "right"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2002-03-08",
+                "label": "2002: Legend of Blue Eyes White Dragon",
+                "pos": "up",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2008-12-01",
+                "label": "2008: Konami takes over",
+                "pos": "down",
+                "align": "center"
+              },
+              {
+                "game": "Yu-Gi-Oh!",
+                "date": "2023-06-01",
+                "label": "2023: 25th anniversary rarity",
+                "pos": "up",
+                "align": "right"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "filter": "datum.pos == 'down' && datum.align == 'right'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dy": 26,
+            "dx": 6,
+            "fontSize": 10.5,
+            "color": "#333",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": 10,
+                "grid": false
+              },
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                },
+                "padding": 14
+              }
+            },
+            "y": {
+              "field": "game",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelFontWeight": "bold",
+                "ticks": false,
+                "domain": false,
+                "labelLimit": 200
+              }
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 760,
+      "height": 40,
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/sets_all.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "cards": "number"
+          }
+        }
+      },
+      "params": [
+        {
+          "name": "brush",
+          "select": {
+            "type": "interval",
+            "encodings": [
+              "x"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "tick",
+        "thickness": 1,
+        "size": 10,
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": "Drag across this strip to zoom into a period; double-click to reset",
+          "axis": {
+            "format": "%Y",
+            "tickCount": 10,
+            "grid": false,
+            "titleFontWeight": "normal",
+            "titleColor": "#777"
+          },
+          "scale": {
+            "domain": [
+              "1993-01-01",
+              "2026-12-31"
+            ]
+          }
+        },
+        "y": {
+          "field": "game",
+          "type": "nominal",
+          "sort": [
+            "Magic: The Gathering",
+            "Pokémon",
+            "Yu-Gi-Oh!"
+          ],
+          "axis": null
+        },
+        "color": {
+          "field": "game",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Magic: The Gathering",
+              "Pokémon",
+              "Yu-Gi-Oh!"
+            ],
+            "range": [
+              "#b5562c",
+              "#c99a1e",
+              "#4b3f8f"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "spacing": 12
+}

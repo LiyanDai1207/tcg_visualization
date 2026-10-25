@@ -1,0 +1,405 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth of relative Google Trends search interest in collectible card games by country, 2021-2026.",
+  "width": "container",
+  "height": 430,
+  "projection": {
+    "type": "equalEarth",
+    "scale": {
+      "expr": "min(width / 5.45, height / 2.68)"
+    },
+    "translate": {
+      "expr": "[width / 2, height / 2]"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "sphere": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e7eff5",
+        "stroke": null
+      }
+    },
+    {
+      "data": {
+        "graticule": {
+          "step": [
+            30,
+            30
+          ]
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#cddae6",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/js/ne_110m_admin_0_countries.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.NAME != 'Antarctica'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#dcdbd5",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "color": {
+          "datum": "No data",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "No data"
+            ],
+            "range": [
+              "#dcdbd5"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "symbolType": "square",
+            "title": null,
+            "offset": 12
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/tcg_interest_by_country.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Collectible card game": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "lookup": "Region",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/js/ne_110m_admin_0_countries.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_110m_admin_0_countries"
+              }
+            },
+            "key": "properties.NAME"
+          },
+          "as": "geo"
+        },
+        {
+          "filter": "isValid(datum.geo)"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "fill": {
+          "field": "Collectible card game",
+          "type": "quantitative",
+          "title": "Search interest (0 to 100)",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              10,
+              20,
+              30,
+              45,
+              60
+            ],
+            "range": [
+              "#eef3f0",
+              "#cfe0d8",
+              "#a5c7b9",
+              "#72a796",
+              "#418473",
+              "#1c5a4d"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleFontWeight": 600,
+            "gradientLength": 220,
+            "titleLimit": 0,
+            "offset": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Region",
+            "title": "Country"
+          },
+          {
+            "field": "Collectible card game",
+            "type": "quantitative",
+            "title": "Search interest (0 to 100)"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [
+                0,
+                -85
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                85
+              ]
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#8fa5b8",
+        "strokeWidth": 0.8,
+        "strokeDash": [
+          4,
+          3
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 0,
+            "lat": -58,
+            "t": "0° Prime Meridian"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 9,
+        "color": "#71879b"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "name": "Chile",
+            "v": 75,
+            "lon": -64,
+            "lat": -36,
+            "t": "Chile 75"
+          },
+          {
+            "name": "Australia",
+            "v": 54,
+            "lon": 134,
+            "lat": -25,
+            "t": "Australia 54"
+          },
+          {
+            "name": "Japan",
+            "v": 50,
+            "lon": 150,
+            "lat": 40,
+            "t": "Japan 50"
+          },
+          {
+            "name": "Canada",
+            "v": 47,
+            "lon": -102,
+            "lat": 58,
+            "t": "Canada 47"
+          },
+          {
+            "name": "USA",
+            "v": 46,
+            "lon": -99,
+            "lat": 39,
+            "t": "USA 46"
+          },
+          {
+            "name": "China",
+            "v": 34,
+            "lon": 103,
+            "lat": 34,
+            "t": "China 34"
+          },
+          {
+            "name": "Brazil",
+            "v": 18,
+            "lon": -52,
+            "lat": -10,
+            "t": "Brazil 18"
+          },
+          {
+            "name": "India",
+            "v": 2,
+            "lon": 79,
+            "lat": 22,
+            "t": "India 2"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1f2b28",
+        "stroke": "white",
+        "strokeWidth": 3,
+        "strokeOpacity": 0.85
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "name": "Chile",
+            "v": 75,
+            "lon": -64,
+            "lat": -36,
+            "t": "Chile 75"
+          },
+          {
+            "name": "Australia",
+            "v": 54,
+            "lon": 134,
+            "lat": -25,
+            "t": "Australia 54"
+          },
+          {
+            "name": "Japan",
+            "v": 50,
+            "lon": 150,
+            "lat": 40,
+            "t": "Japan 50"
+          },
+          {
+            "name": "Canada",
+            "v": 47,
+            "lon": -102,
+            "lat": 58,
+            "t": "Canada 47"
+          },
+          {
+            "name": "USA",
+            "v": 46,
+            "lon": -99,
+            "lat": 39,
+            "t": "USA 46"
+          },
+          {
+            "name": "China",
+            "v": 34,
+            "lon": 103,
+            "lat": 34,
+            "t": "China 34"
+          },
+          {
+            "name": "Brazil",
+            "v": 18,
+            "lon": -52,
+            "lat": -10,
+            "t": "Brazil 18"
+          },
+          {
+            "name": "India",
+            "v": 2,
+            "lon": 79,
+            "lat": 22,
+            "t": "India 2"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1f2b28"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+  },
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  }
+}
