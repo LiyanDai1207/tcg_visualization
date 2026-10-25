@@ -36,6 +36,46 @@
         {
           "calculate": "measure == 'cards' ? datum.cards : datum.sets",
           "as": "value"
+        },
+        {
+          "stack": "value",
+          "groupby": [
+            "year"
+          ],
+          "sort": [
+            {
+              "field": "game"
+            }
+          ],
+          "offset": "center",
+          "as": [
+            "c0",
+            "c1"
+          ]
+        },
+        {
+          "stack": "value",
+          "groupby": [
+            "year"
+          ],
+          "sort": [
+            {
+              "field": "game"
+            }
+          ],
+          "offset": "zero",
+          "as": [
+            "z0",
+            "z1"
+          ]
+        },
+        {
+          "calculate": "layout == 'stream' ? datum.c0 : datum.z0",
+          "as": "y0"
+        },
+        {
+          "calculate": "layout == 'stream' ? datum.c1 : datum.z1",
+          "as": "y1"
         }
       ],
       "mark": {
@@ -62,10 +102,12 @@
           }
         },
         "y": {
-          "field": "value",
+          "field": "y0",
           "type": "quantitative",
-          "stack": "center",
-          "axis": null
+          "axis": null,
+          "scale": {
+            "zero": false
+          }
         },
         "color": {
           "field": "game",
@@ -90,9 +132,6 @@
             "titleFontWeight": "normal",
             "titleLimit": 0
           }
-        },
-        "order": {
-          "field": "game"
         },
         "tooltip": [
           {
@@ -123,6 +162,12 @@
             "value": 0.95
           },
           "value": 0.15
+        },
+        "y2": {
+          "field": "y1"
+        },
+        "detail": {
+          "field": "game"
         }
       },
       "params": [
@@ -182,6 +227,22 @@
           "Sets released"
         ],
         "name": "Show: "
+      }
+    },
+    {
+      "name": "layout",
+      "value": "stream",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "stream",
+          "stacked"
+        ],
+        "labels": [
+          "Streamgraph",
+          "Stacked area (fixed baseline)"
+        ],
+        "name": "Layout: "
       }
     }
   ],
