@@ -208,20 +208,45 @@
     {
       "transform": [
         {
-          "filter": "datum.period == '2021-2025' && datum.card_type == 'Xyz'"
+          "filter": "datum.period == '2021-2025' && indexof(['Synchro','Xyz','Pendulum','Link'], datum.card_type) >= 0"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "share",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "calculate": "5.5 + (2.5 - datum.rank) * 2",
+          "as": "label_y"
+        },
+        {
+          "calculate": "datum.card_type + ' ' + format(datum.share, '.1f') + '%'",
+          "as": "label"
         }
       ],
       "mark": {
         "type": "text",
         "align": "left",
         "dx": 8,
-        "dy": -6,
         "fontSize": 10.5,
         "color": "#5d53a0"
       },
       "encoding": {
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
         "text": {
-          "value": "4 new summon types"
+          "field": "label"
         }
       }
     }
