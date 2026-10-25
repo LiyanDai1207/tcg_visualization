@@ -1,6 +1,4 @@
-/* =========================================================
-   design rules
-   ========================================================= */
+/* ========================================================= design rules ========================================================= */
 :root {
   --table: #efedf6;      /* pale lavender ground, same family as the hero */
   --card: #ffffff;       /* panel */
@@ -45,29 +43,55 @@ p { margin: 0 0 14px; }
 
 
 /* purple opening band with a faint card-back lattice ===== */
-.hero-band { background-color: #3d3378;
+.hero-band { background-color: #5a4ea3;
   background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 16px),
                     repeating-linear-gradient(-45deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 16px); }
 .hero-band .hero-card { background: rgba(255,255,255,0.03); border: 2px solid #b3a9ee; }
 .hero-band .hero-inner { border-color: rgba(255,255,255,0.18); }
-.hero-band .kicker { color: #c9c2ee; }
+.hero-band .kicker { color: #ebe8fa; }
 .hero-band .kicker .pill { background: #b3a9ee; color: #241c48; }
 .hero-band h1 { color: #ffffff; }
 .hero-band .standfirst { color: #dcd7f2; }
 .hero-band .stat { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-left: 4px solid var(--hero-accent, #b3a9ee); }
 .hero-band .stat[data-game="mtg"] { --hero-accent: #e57d4e; }
-.hero-band .stat[data-game="ygo"] { --hero-accent: #a99ff0; }
+.hero-band .stat[data-game="ygo"] { --hero-accent: #ddd7ff; }
 .hero-band .stat[data-game="all"] { --hero-accent: #f0c24d; }
 .hero-band .stat .big { color: #ffffff; }
 .hero-band .stat .what { color: #d9d4ef; }
-.hero-band .hero-stack .yr { fill: #bdb5e6; }
+.hero-band .hero-stack .yr { fill: #e4e0f8; }
 .hero-band .hero-stack .pk { fill: #ffffff; }
 .hero-band .hero-stack figcaption { color: #d9d4ef; border-top-color: rgba(255,255,255,0.2); }
-.hero-band .hero-stack figcaption em { color: #b7afe0; }
+.hero-band .hero-stack figcaption em { color: #e4e0f8; }
 .hero-band .game-key { color: #e6e2f7; }
-.hero-band .k-mtg::before { background: #e57d4e; } .hero-band .k-pkm::before { background: #f0c24d; } .hero-band .k-ygo::before { background: #a99ff0; }
+.hero-band .k-mtg::before { background: #e57d4e; } .hero-band .k-pkm::before { background: #f0c24d; } .hero-band .k-ygo::before { background: #ddd7ff; }
 .hero-band .reading { color: #d9d4ef; }
 .hero-band .reading strong { color: #ffffff; }
+
+
+/* light opening variant ===== */
+.hero-band { background-color: #e9e5f8;
+  background-image: repeating-linear-gradient(45deg, rgba(36,28,72,0.05) 0 1px, transparent 1px 16px),
+                    repeating-linear-gradient(-45deg, rgba(36,28,72,0.05) 0 1px, transparent 1px 16px); }
+.hero-band .hero-card { background: #ffffff; border: 2px solid #241c48; }
+.hero-band .hero-inner { border-color: #dcd8ea; }
+.hero-band .kicker { color: #5a4ea3; }
+.hero-band .kicker .pill { background: #241c48; color: #ffffff; }
+.hero-band h1 { color: #241c48; }
+.hero-band .standfirst { color: #4a4a55; }
+.hero-band .stat { background: #f6f4fc; border: 1px solid #dcd8ea; border-left: 4px solid var(--hero-accent, #241c48); }
+.hero-band .stat[data-game="mtg"] { --hero-accent: #b5562c; }
+.hero-band .stat[data-game="ygo"] { --hero-accent: #4b3f8f; }
+.hero-band .stat[data-game="all"] { --hero-accent: #c99a1e; }
+.hero-band .stat .big { color: #241c48; }
+.hero-band .stat .what { color: #4a4a55; }
+.hero-band .hero-stack .yr { fill: #6b6b76; }
+.hero-band .hero-stack .pk { fill: #241c48; }
+.hero-band .hero-stack figcaption { color: #4a4a55; border-top-color: #dcd8ea; }
+.hero-band .hero-stack figcaption em { color: #6b6b76; }
+.hero-band .game-key { color: #383844; }
+.hero-band .k-mtg::before { background: #b5562c; } .hero-band .k-pkm::before { background: #c99a1e; } .hero-band .k-ygo::before { background: #4b3f8f; }
+.hero-band .reading { color: #4a4a55; }
+.hero-band .reading strong { color: #241c48; }
 
 /* section intro sits under the section title ===== */
 .sec-head { display: block; margin-bottom: 22px; }
@@ -118,8 +142,11 @@ h2 { font-family: var(--display); font-weight: 800; font-size: 2.1rem; line-heig
 .then-now { display: grid; grid-template-columns: max-content max-content max-content; gap: 6px 14px; font-size: 1.1rem; margin-bottom: 20px; }
 .then-now .then { color: var(--muted); } .then-now .arrow { color: #a0a0a8; } .then-now .now { font-weight: 700; color: var(--ink); }
 
+.conclusion { background: var(--card); border: 2px solid var(--ink); border-radius: 14px; padding: 5px; margin-top: 8px; }
+.conclusion p { margin: 0; border: 1px solid #dcd8ea; border-radius: 9px; padding: 18px 22px; font-family: "Spectral", Georgia, serif; font-style: italic; font-size: 1.12rem; line-height: 1.6; color: var(--ink); max-width: none; }
+
 /* footer: sources, data notes, method ===== */
-.footer-band { background: #3d3378; margin-top: 80px; }
+.footer-band { background: #5a4ea3; margin-top: 80px; }
 footer { padding: 48px 28px 56px; }
 .about { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 20px; }
 .about-col { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.22); border-radius: 12px; padding: 22px 24px; font-size: 0.88rem; color: #d9d4ef; }
