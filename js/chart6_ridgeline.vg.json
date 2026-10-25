@@ -18,11 +18,24 @@
   },
   "transform": [
     {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "printings",
+          "as": "all_max"
+        }
+      ]
+    },
+    {
+      "calculate": "scaleMode == 'own' ? datum.norm : datum.printings / datum.all_max",
+      "as": "h"
+    },
+    {
       "calculate": "datum.row + 1",
       "as": "base"
     },
     {
-      "calculate": "datum.row + 1 - datum.norm * 1.6",
+      "calculate": "datum.row + 1 - datum.h * 1.6",
       "as": "top"
     }
   ],
@@ -238,5 +251,23 @@
   "autosize": {
     "type": "fit-x",
     "contains": "padding"
-  }
+  },
+  "params": [
+    {
+      "name": "scaleMode",
+      "value": "own",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "own",
+          "shared"
+        ],
+        "labels": [
+          "Each rarity's own peak",
+          "Shared scale (compare counts)"
+        ],
+        "name": "Scale: "
+      }
+    }
+  ]
 }
