@@ -1,12 +1,11 @@
 """
 prepare_data.py
-把 4 个 API 原始 JSON 整理成网页用的小 CSV。
 Turns the four raw API JSON files into the small CSVs used by the website.
 
-运行 / Run:
+Run:
     python3 scripts/prepare_data.py raw_data/
 
-输入 / Input (raw_data/ 文件夹, 不上传到 GitHub):
+Input (raw_data/ folder, not uploaded to GitHub):
     mtg_sets.json   Scryfall  https://api.scryfall.com/sets
     pkm_sets.json   Pokemon TCG API  https://api.pokemontcg.io/v2/sets
     ygo_sets.json   YGOPRODeck  https://db.ygoprodeck.com/api/v7/cardsets.php
@@ -22,8 +21,8 @@ RAW = Path(sys.argv[1] if len(sys.argv) > 1 else "raw_data")
 OUT = Path("data")
 OUT.mkdir(exist_ok=True)
 
-CUTOFF = "2026-09-28"   # 数据下载日期:之后的「未来系列」不算 / ignore sets dated after download
-LAST_FULL_YEAR = 2025   # 按年统计只到最后一个完整年份 / per-year charts stop at last full year
+CUTOFF = "2026-09-28"   # ignore sets dated after download
+LAST_FULL_YEAR = 2025   # per-year charts stop at last full year
 
 
 def write_csv(name, rows, fields):
@@ -35,12 +34,12 @@ def write_csv(name, rows, fields):
 
 
 # ------------------------------------------------------------------
-# 1. 三款游戏的系列清单 / one row per set, all three games
+# 1. one row per set, all three games
 # ------------------------------------------------------------------
-# Magic: 排除不是「卡牌系列」的产品 / exclude products that are not card sets
+# exclude products that are not card sets
 MTG_EXCLUDE = {"token", "memorabilia", "promo", "alchemy", "minigame",
                "masterpiece", "vanguard", "treasure_chest"}
-# 跨多年的重印卡池,日期只是开始日,会造成假尖峰 / multi-year reprint pools that create fake spikes
+# multi-year reprint pools that create fake spikes
 MTG_EXCLUDE_NAMES = {"The List", "Secret Lair Drop"}
 
 sets = []
@@ -61,13 +60,13 @@ for s in json.load(open(RAW / "pkm_sets.json"))["data"]:
     sets.append({"game": "Pokémon", "set_name": s["name"],
                  "date": d, "cards": s["total"]})
 
-ygo_set_date = {}   # 卡包名 → 发行日期,第 3、4 步要用 / set name → date, used below
+ygo_set_date = {}   # set name → date, used below
 for s in json.load(open(RAW / "ygo_sets.json")):
     d = s.get("tcg_date")
     if not d or d > CUTOFF or not s.get("num_of_cards"):
         continue
     if "promo" in s["set_name"].lower():
-        continue                              # 促销卡不算系列,也不算印刷 / promos are not sets or printings
+        continue                              # promos are not sets or printings
     ygo_set_date[s["set_name"]] = d
     sets.append({"game": "Yu-Gi-Oh!", "set_name": s["set_name"],
                  "date": d, "cards": s["num_of_cards"]})
@@ -77,7 +76,7 @@ write_csv("sets_all.csv", sets, ["game", "set_name", "date", "cards"])
 
 
 # ------------------------------------------------------------------
-# 2. 每年每款游戏的系列数和卡牌数 / sets and cards per game per year
+# 2. sets and cards per game per year
 # ------------------------------------------------------------------
 per_year = defaultdict(lambda: {"sets": 0, "cards": 0})
 for s in sets:
@@ -91,7 +90,7 @@ write_csv("sets_by_year.csv", rows, ["game", "year", "sets", "cards"])
 
 
 # ------------------------------------------------------------------
-# 3. Yu-Gi-Oh! 卡牌类型 × 首次印刷年份 / card type by first-print year
+# 3. card type by first-print year
 # ------------------------------------------------------------------
 TYPE_MAP = {
     "normal": "Normal Monster", "effect": "Effect Monster", "ritual": "Ritual",
@@ -104,14 +103,14 @@ type_year = Counter()
 for c in cards:
     ft = c["frameType"]
     if ft in ("skill", "token"):
-        continue                                   # 不是正式卡牌 / not regular cards
+        continue                                   # not regular cards
     t = "Pendulum" if "pendulum" in ft else TYPE_MAP[ft]
     dates = [ygo_set_date[cs["set_name"]] for cs in c.get("card_sets", [])
              if cs["set_name"] in ygo_set_date]
     if not dates:
         continue
-    y = int(min(dates)[:4])                        # 首次印刷 = 最早的卡包 / earliest set
-    if 2002 <= y <= LAST_FULL_YEAR:            # TCG 2002 年在英语市场发售 / TCG launched 2002
+    y = int(min(dates)[:4])                        # earliest set
+    if 2002 <= y <= LAST_FULL_YEAR:            # TCG launched 2002
         type_year[(t, y)] += 1
 
 rows = [{"card_type": t, "year": y, "new_cards": n} for (t, y), n in sorted(type_year.items(), key=lambda k: (k[0][1], k[0][0]))]
@@ -119,7 +118,7 @@ write_csv("ygo_types_by_year.csv", rows, ["card_type", "year", "new_cards"])
 
 
 # ------------------------------------------------------------------
-# 4. Yu-Gi-Oh! 稀有度:早期 vs 近期 (waffle 用) / rarity tiers, early vs recent
+# 4. rarity tiers, early vs recent
 # ------------------------------------------------------------------
 INVALID = {"New", "2", "3", "Reprint", "New artwork", "European & Oceanian debut",
            "European debut", "Oceanian debut", "Cr", "force-SMW"}
@@ -133,7 +132,7 @@ tier_count = {p: Counter() for p in PERIODS}
 names_per_year = defaultdict(set)
 for c in cards:
     for cs in c.get("card_sets", []):
-        r = cs["set_rarity"].replace("PLatinum", "Platinum")   # 统一拼写 / fix typo
+        r = cs["set_rarity"].replace("PLatinum", "Platinum")   # fix typo
         d = ygo_set_date.get(cs["set_name"])
         if r in INVALID or not d:
             continue
@@ -149,7 +148,7 @@ for p, cnt in tier_count.items():
     total = sum(cnt.values())
     raw = {t: cnt[t] / total * 100 for t in TIERS}
     cells = {t: int(raw[t]) for t in TIERS}
-    # 最大余数法凑满 100 格 / largest remainder so cells add to 100
+    # largest remainder so cells add to 100
     for t in sorted(TIERS, key=lambda t: raw[t] - cells[t], reverse=True)[: 100 - sum(cells.values())]:
         cells[t] += 1
     i = 0
@@ -165,7 +164,7 @@ write_csv("ygo_rarity_names_by_year.csv", rows, ["year", "rarity_names"])
 
 
 # ------------------------------------------------------------------
-# 5. 今昔对比:头五年 vs 最近五年,平均每年新卡数 / first 5 years vs last 5 years
+# 5. first 5 years vs last 5 years
 # ------------------------------------------------------------------
 first_year = {}
 for s in sets:
@@ -183,7 +182,7 @@ write_csv("then_vs_now.csv", dumbbell, ["game", "period", "stage", "cards_per_ye
 
 
 # ------------------------------------------------------------------
-# 6. 类型占比:早期 vs 近期 (slope graph) / card-type share, early vs recent
+# 6. card-type share, early vs recent
 # ------------------------------------------------------------------
 tot = Counter()
 for (t, y), n in type_year.items():
@@ -205,7 +204,7 @@ write_csv("ygo_types_then_now.csv", slope, ["card_type", "period", "share"])
 
 
 # ------------------------------------------------------------------
-# 7. 每种稀有度每年的印刷数 (ridgeline) / printings per rarity per year
+# 7. printings per rarity per year
 # ------------------------------------------------------------------
 rar_year = Counter()
 for c in cards:
@@ -220,15 +219,15 @@ for c in cards:
 by_name = Counter()
 for (r, y), n in rar_year.items():
     by_name[r] += n
-keep = [r for r, n in by_name.items() if n >= 200]          # 常见的稀有度 / common enough to draw
+keep = [r for r, n in by_name.items() if n >= 200]          # common enough to draw
 first = {r: min(y for (rr, y) in rar_year if rr == r) for r in keep}
-order = sorted(keep, key=lambda r: (first[r], -by_name[r]))       # 按首次出现排序 / by first appearance
+order = sorted(keep, key=lambda r: (first[r], -by_name[r]))       # by first appearance
 ridge = []
 for i, r in enumerate(order):
     peak = max(rar_year.get((r, y), 0) for y in range(2002, LAST_FULL_YEAR + 1))
     for y in range(2002, LAST_FULL_YEAR + 1):
         n = rar_year.get((r, y), 0)
-        # row: 第几行;norm: 相对自己峰值的高度 (0-1),每条山脊各自缩放
+        # row: which ridge; norm: height relative to the rarity's own peak (0-1), so each ridge is scaled separately
         # row index and height relative to the ridge's own peak
         ridge.append({"rarity": r, "row": i, "year": y, "printings": n, "first_year": first[r],
                       "norm": round(n / peak, 3)})
@@ -236,7 +235,7 @@ write_csv("ygo_rarity_by_year.csv", ridge, ["rarity", "row", "year", "printings"
 
 
 # ------------------------------------------------------------------
-# 8. 价格:同一稀有度,老卡 vs 新卡的中位价 (dumbbell) / median listed price by tier
+# 8. median listed price by tier
 # ------------------------------------------------------------------
 from statistics import median
 prices = defaultdict(list)
@@ -245,7 +244,7 @@ for c in cards:
         r = cs["set_rarity"].replace("PLatinum", "Platinum")
         d = ygo_set_date.get(cs["set_name"])
         p = float(cs.get("set_price") or 0)
-        if r in INVALID or not d or p <= 0:                   # 0 = 没有价格 / no listed price
+        if r in INVALID or not d or p <= 0:                   # no listed price
             continue
         y = int(d[:4])
         for label, (a, b) in PERIODS.items():
@@ -257,14 +256,14 @@ write_csv("ygo_price_then_now.csv", price_rows, ["tier", "period", "median_price
 
 
 # ------------------------------------------------------------------
-# 9. Beeswarm 坐标:提前算好每个点的上下偏移,避免重叠 / precomputed beeswarm offsets
-#    x 轴:每个系列的卡牌数(对数刻度,和图里的 scale 一致)
+# 9. precomputed beeswarm offsets
+#    x axis: cards per set (log scale, same as the chart's scale)
 # ------------------------------------------------------------------
 import math
-MIN_SET = 60                         # 60 张以上算「完整系列」/ full-size set threshold
-W, R = 420, 1.8                      # 图宽(像素)和点半径,必须和 spec 一致 / must match the spec
-LO, HI = 50, 1500                     # x 轴范围 / log-scale domain
-LANES = {"Magic: The Gathering": 35, "Pokémon": 95, "Yu-Gi-Oh!": 195}   # 每条泳道的中心(像素)/ lane centres in px
+MIN_SET = 60                         # full-size set threshold (60+ cards)
+W, R = 420, 1.8                      # must match the spec
+LO, HI = 50, 1500                     # log-scale domain
+LANES = {"Magic: The Gathering": 35, "Pokémon": 95, "Yu-Gi-Oh!": 195}   # lane centres in px
 
 
 def era(y):
@@ -278,12 +277,12 @@ def px(v):
 swarm = []
 for g in LANES:
     pts = sorted([s for s in sets if s["game"] == g and int(s["date"][:4]) <= LAST_FULL_YEAR
-                  and s["cards"] >= MIN_SET],                 # 只看完整系列,排除小卡组/铁盒 / full-size sets only
+                  and s["cards"] >= MIN_SET],                 # full-size sets only
                  key=lambda s: s["cards"])
     placed = []
     ties = Counter()
     for s in pts:
-        # 同样卡数的系列很多(如 57 个 100 张的系列),横向稍微错开 5 列,避免叠成一根高柱
+        # many sets share a size (e.g. 57 sets of 100 cards), so they are spread over 5 columns instead of one tall stack
         # identical sizes are fanned into 5 narrow columns so they do not form one tall tower
         k_tie = ties[s["cards"]]
         ties[s["cards"]] += 1
