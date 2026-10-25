@@ -2,11 +2,14 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Choropleth of relative Google Trends search interest in collectible card games by country, 2021-2026.",
   "width": "container",
-  "height": 470,
+  "height": 430,
   "projection": {
     "type": "equalEarth",
-    "fit": {
-      "type": "Sphere"
+    "scale": {
+      "expr": "min(width / 5.45, height / 2.68)"
+    },
+    "translate": {
+      "expr": "[width / 2, height / 2]"
     }
   },
   "layer": [
@@ -69,8 +72,10 @@
             ]
           },
           "legend": {
-            "orient": "top-right",
-            "symbolType": "square"
+            "orient": "bottom",
+            "symbolType": "square",
+            "title": null,
+            "offset": 12
           }
         }
       }
@@ -137,9 +142,12 @@
             ]
           },
           "legend": {
-            "orient": "bottom-left",
+            "orient": "bottom",
             "direction": "horizontal",
-            "titleLimit": 0
+            "titleFontWeight": 600,
+            "gradientLength": 220,
+            "titleLimit": 0,
+            "offset": 12
           }
         },
         "tooltip": [
@@ -381,39 +389,6 @@
         },
         "text": {
           "field": "t"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "lon": 25,
-            "lat": -44
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "top",
-        "fontSize": 10.5,
-        "lineHeight": 14,
-        "color": "#3d4a57",
-        "text": [
-          "Singapore (100) and",
-          "Hong Kong (79) rank top",
-          "but are too small to draw."
-        ]
-      },
-      "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
         }
       }
     }
