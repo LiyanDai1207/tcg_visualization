@@ -6,13 +6,16 @@
   "projection": {
     "type": "equalEarth",
     "scale": {
-      "expr": "min(width / 5.45, height / 2.68) * (region == 'North America' ? 3.2 : region == 'Europe' ? 4.5 : region == 'Asia-Pacific' ? 2.2 : 1)"
+      "expr": "min(width / 5.45, height / 2.68) * (region == 'North America' ? 3.2 : region == 'Europe' ? 4.5 : region == 'Pacific' ? 1.3 : 1)"
     },
     "center": {
-      "expr": "region == 'North America' ? [-98, 40] : region == 'Europe' ? [5, 50] : region == 'Asia-Pacific' ? [150, -5] : [0, 0]"
+      "expr": "region == 'North America' ? [-98, 40] : region == 'Europe' ? [5, 50] : region == 'Pacific' ? [0, 8] : [0, 0]"
     },
     "translate": {
       "expr": "[width / 2, height / 2]"
+    },
+    "rotate": {
+      "expr": "region == 'Pacific' ? [160, 0, 0] : [0, 0, 0]"
     }
   },
   "layer": [
@@ -434,7 +437,7 @@
           "World",
           "North America",
           "Europe",
-          "Asia-Pacific"
+          "Pacific"
         ],
         "name": "Zoom to: "
       }

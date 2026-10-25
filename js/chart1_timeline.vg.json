@@ -3,7 +3,7 @@
   "description": "Annotated timeline: one tick per English card set for each game, with key milestones.",
   "vconcat": [
     {
-      "width": 840,
+      "width": 760,
       "height": 260,
       "layer": [
         {
@@ -990,7 +990,7 @@
       ]
     },
     {
-      "width": 840,
+      "width": 760,
       "height": 40,
       "data": {
         "url": "https://raw.githubusercontent.com/LiyanDai1207/tcg_visualization/main/data/sets_all.csv",
