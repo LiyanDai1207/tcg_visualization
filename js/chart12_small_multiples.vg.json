@@ -26,7 +26,8 @@
         "labelFontWeight": "bold",
         "labelFontSize": 11,
         "labelAnchor": "start",
-        "labelColor": "#333"
+        "labelColor": "#333",
+        "labelExpr": "datum.value == 'Magic: The Gathering' ? 'Magic' : datum.value"
       }
     }
   },
@@ -34,83 +35,142 @@
   "spec": {
     "width": 112,
     "height": 250,
-    "mark": {
-      "type": "line",
-      "strokeWidth": 2,
-      "interpolate": "monotone"
-    },
-    "encoding": {
-      "x": {
-        "field": "year",
-        "type": "quantitative",
-        "title": null,
-        "scale": {
-          "domain": [
-            1993,
-            2025
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "strokeWidth": 2,
+          "interpolate": "monotone"
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                1993,
+                2025
+              ]
+            },
+            "axis": {
+              "format": "d",
+              "values": [
+                1995,
+                2010,
+                2025
+              ],
+              "grid": false
+            }
+          },
+          "y": {
+            "field": "value",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+              "grid": true,
+              "gridColor": "#ececec",
+              "format": ",.0f"
+            }
+          },
+          "color": {
+            "field": "game",
+            "type": "nominal",
+            "legend": null,
+            "scale": {
+              "domain": [
+                "Magic: The Gathering",
+                "Pokémon",
+                "Yu-Gi-Oh!"
+              ],
+              "range": [
+                "#b5562c",
+                "#c99a1e",
+                "#4b3f8f"
+              ]
+            }
+          },
+          "tooltip": [
+            {
+              "field": "game",
+              "title": "Game"
+            },
+            {
+              "field": "year",
+              "type": "quantitative",
+              "title": "Year",
+              "format": "d"
+            },
+            {
+              "field": "sets",
+              "type": "quantitative",
+              "title": "Sets released"
+            },
+            {
+              "field": "cards",
+              "type": "quantitative",
+              "title": "New cards",
+              "format": ","
+            }
           ]
-        },
-        "axis": {
-          "format": "d",
-          "values": [
-            1995,
-            2010,
-            2025
-          ],
-          "grid": false
         }
       },
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "title": null,
-        "axis": {
-          "grid": true,
-          "gridColor": "#ececec",
-          "format": ",.0f"
+      {
+        "transform": [
+          {
+            "filter": "measure12 == 'sets' && datum.game == 'Magic: The Gathering' && datum.year == 2022"
+          }
+        ],
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "size": 30,
+          "color": "#7f3414"
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "value",
+            "type": "quantitative"
+          }
         }
       },
-      "color": {
-        "field": "game",
-        "type": "nominal",
-        "legend": null,
-        "scale": {
-          "domain": [
-            "Magic: The Gathering",
-            "Pokémon",
-            "Yu-Gi-Oh!"
-          ],
-          "range": [
-            "#b5562c",
-            "#c99a1e",
-            "#4b3f8f"
-          ]
+      {
+        "transform": [
+          {
+            "filter": "measure12 == 'sets' && datum.game == 'Magic: The Gathering' && datum.year == 2022"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 0,
+          "dy": 0,
+          "fontSize": 10,
+          "lineBreak": "\n",
+          "color": "#7f3414"
+        },
+        "encoding": {
+          "x": {
+            "datum": 1994,
+            "type": "quantitative"
+          },
+          "y": {
+            "datum": 36,
+            "type": "quantitative"
+          },
+          "text": {
+            "value": [
+              "11 sets in 2010,",
+              "24 in 2022"
+            ]
+          }
         }
-      },
-      "tooltip": [
-        {
-          "field": "game",
-          "title": "Game"
-        },
-        {
-          "field": "year",
-          "type": "quantitative",
-          "title": "Year",
-          "format": "d"
-        },
-        {
-          "field": "sets",
-          "type": "quantitative",
-          "title": "Sets released"
-        },
-        {
-          "field": "cards",
-          "type": "quantitative",
-          "title": "New cards",
-          "format": ","
-        }
-      ]
-    }
+      }
+    ]
   },
   "params": [
     {
